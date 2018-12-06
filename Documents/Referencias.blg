@@ -1,0 +1,17 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Referencias.aux
+The style file: IEEEtran.bst
+I couldn't open database file BibliografiaFilippo.bib
+---line 10 of file Referencias.aux
+ : \bibdata{BibliografiaFilippo
+ :                             }
+I'm skipping whatever remains of this command
+I found no database files---while reading file Referencias.aux
+Warning--I didn't find a database entry for "nahmias2004models"
+Warning--I didn't find a database entry for "voeks1970self"
+Warning--I didn't find a database entry for "OMS2018"
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+
+Done.
+(There were 2 error messages)
