@@ -1,0 +1,830 @@
+# Ammonit Data Logger - System Information
+# ----------------------------------------
+# 
+# Data Logger Type                Meteo-40M                       
+# Serial Number                   D161075                         
+# Number of Channels              8 Analog Voltage, 8 Counters, 1 Analog Current, 1 Current Sources, 4 Digital, 4 Switches, 8 RS-485
+# Data Logger Location            25.709764,-98.356083 @ 107m     
+# RAM                             Total: 123MiB, Used: 61MiB, Free: 62MiB
+# Source Data Memory              1960.51MiB (169.48% used, page-id: 6804770)
+# System Memory                   Total: 461MiB, Used: 143MiB, Free: 319MiB
+# Software Version                1.5.10 (2016-08-01)             
+# Bootloader Version              10395                           
+# Current Connections             Admin (192.168.12.79)           
+# Date/time                       2019-02-15 12:40:50 UTC         
+
+
+[System]
+loggername=ZUMA PER IV
+camera_url=
+use_scada=false
+use_ntp=true
+use_gps=false
+ntpserver=0.pool.ntp.org 1.pool.ntp.org 2.pool.ntp.org 3.pool.ntp.org
+timezone=UTC-06:00
+display_permissions=network,rec_on,wlan
+cecs_power_permanent=false
+cecs_power_on_status=none
+cecs_auto_reboot=never
+longitude=-98.356083
+latitude=25.709764
+altitude=107
+sign_enc=none
+force_enc=false
+serial=D161075
+type=Meteo-40M
+source_data_storage_total=unknown
+
+[ModemGSM]
+permanent=true
+number=*99#
+apn=internet.movistar.mx
+username=movistar
+bsd-comp=false
+deflate-comp=false
+vj-comp=false
+switch_id=S1
+sms_active=false
+sms_receiver=
+smsc=
+
+[Ethernet]
+permanent=true
+method=dhcp
+ip_address=192.168.40.40
+subnet_mask=255.255.255.0
+gateway=192.168.40.1
+dns_server=192.168.40.1
+switch_id=none
+never_default=false
+addsubnet=
+
+[Heating]
+switch_id=none
+label=
+temperature_eval=none
+humidity_eval=none
+temperature_min=-10
+temperature_max=2
+humidity_min=70
+voltage_eval=none
+voltage_min=0
+windspeed_eval=none
+windspeed_min=20
+
+[WLAN]
+active=true
+ip_address=192.168.40.1
+network=192.168.40.0
+netmask=255.255.255.0
+firstaddr=192.168.40.2
+lastaddr=192.168.40.255
+
+[ServerCopy]
+method=scp
+server=
+port=0
+username=
+directory=
+startdate=
+csv_data=true
+logbook=true
+config=true
+use_camera=false
+
+[EMail]
+server=outlook.office365.com
+port=587
+username=gprs@climatik.mx
+from=gprs@climatik.mx
+to=lrodriguez@zumaenergia.com
+cc=gprs@climatik.mx
+popserver=outlook.office365.com
+startdate=
+csv_data=true
+logbook=true
+config=false
+use_camera=false
+
+[Online]
+tunnel_active=true
+tunnel_active_only_online_action=false
+tunnel_active_only_for_signalling=false
+tunnel_login=logger@D161075.tunnel.ammonit.com
+tunnel_port=4040
+tunnel_access=
+ui_low_traffic=false
+
+[AmmonitOR]
+project_key=LJKX
+server=upload.ammonit.com
+username=upload
+port=0
+startdate=
+csv_data=true
+logbook=true
+config=true
+use_camera=false
+snapshot=true
+
+[SCADA]
+active=false
+serial_setting=38400 8N1
+id=1
+protocol_type=Modbus TCP
+port=502
+allowed=
+interval=10 min
+byte_endianness=high_first
+word_endianness=high_first
+
+[Evaluation]
+stat_interval=10 min
+file_interval=daily
+order=1,2,3,4,5,6,7,8,9,11,12,10
+partial=false
+
+[ActionAmmonitOR]
+weekdays=mon,tue,wed,thu,fri,sat,sun
+time_start=09:05
+time_interval=0:00
+quantity=1
+
+[ActionEMail]
+weekdays=mon,tue,wed,thu,fri,sat,sun
+time_start=09:10
+time_interval=0:00
+quantity=1
+
+[ActionCopy]
+weekdays=mon,tue,wed,thu,fri,sat,sun
+time_start=9:08
+time_interval=0:00
+quantity=1
+
+[ActionOnline]
+weekdays=mon,tue,wed,thu,fri,sat,sun
+time_start=09:00
+time_interval=06:00
+quantity=2
+minimal_runtime=00:50
+
+[CSVFilesGenerate]
+weekdays=
+time_start=12:00
+time_interval=0:00
+quantity=1
+
+[A1]
+active=true
+rate=1 s
+range=10 V
+switch_active=false
+switch_id=S1
+switch_pretime=1 min
+sensor=0
+statistics=avg_scalar,max,min,stddev,count
+
+[A2]
+active=true
+rate=1 s
+range=10 V
+switch_active=false
+switch_id=S1
+switch_pretime=1 min
+sensor=0
+statistics=avg_scalar,max,min,stddev,count
+
+[A3]
+active=true
+rate=1 s
+range=1 V
+switch_active=false
+switch_id=S1
+switch_pretime=1 min
+sensor=0
+statistics=avg_scalar,max,min,stddev,count
+
+[A4]
+active=false
+rate=1 s
+range=10 V
+switch_active=false
+switch_id=S1
+switch_pretime=1 min
+sensor=0
+statistics=avg_scalar,max,min,stddev,count
+
+[A5]
+active=false
+rate=1 s
+range=10 V
+switch_active=false
+switch_id=S1
+switch_pretime=1 min
+sensor=0
+statistics=avg_scalar,max,min,stddev,count
+
+[A6]
+active=false
+rate=1 s
+range=10 V
+switch_active=false
+switch_id=S1
+switch_pretime=1 min
+sensor=0
+statistics=avg_scalar,max,min,stddev,count
+
+[A7]
+active=false
+rate=1 s
+range=10 V
+switch_active=false
+switch_id=S1
+switch_pretime=1 min
+sensor=0
+statistics=avg_scalar,max,min,stddev,count
+
+[A8]
+active=false
+rate=1 s
+range=10 V
+switch_active=false
+switch_id=S1
+switch_pretime=1 min
+sensor=0
+statistics=avg_scalar,max,min,stddev,count
+
+[AC1]
+active=false
+rate=1 s
+range=100 mA
+switch_active=false
+switch_id=S1
+switch_pretime=1 min
+sensor=0
+statistics=avg_scalar,max,min,stddev,count
+
+[C1]
+rate=1 s
+active=true
+switch_active=false
+switch_id=S1
+switch_pretime=1 min
+sensor=0
+statistics=avg_scalar,max,min,stddev,count
+
+[C2]
+rate=1 s
+active=true
+switch_active=false
+switch_id=S1
+switch_pretime=1 min
+sensor=0
+statistics=avg_scalar,max,min,stddev,count
+
+[C3]
+rate=1 s
+active=true
+switch_active=false
+switch_id=S1
+switch_pretime=1 min
+sensor=0
+statistics=avg_scalar,max,min,stddev,count
+
+[C4]
+rate=1 s
+active=true
+switch_active=false
+switch_id=S1
+switch_pretime=1 min
+sensor=0
+statistics=avg_scalar,max,min,stddev,count
+
+[C5]
+rate=1 s
+active=true
+switch_active=false
+switch_id=S1
+switch_pretime=1 min
+sensor=0
+statistics=avg_scalar,max,min,stddev,count
+
+[C6]
+rate=1 s
+active=true
+switch_active=false
+switch_id=S1
+switch_pretime=1 min
+sensor=0
+statistics=avg_scalar,max,min,stddev,count
+
+[C7]
+rate=1 s
+active=false
+switch_active=false
+switch_id=S1
+switch_pretime=1 min
+sensor=0
+statistics=avg_scalar,max,min,stddev,count
+
+[C8]
+rate=1 s
+active=false
+switch_active=false
+switch_id=S1
+switch_pretime=1 min
+sensor=0
+statistics=avg_scalar,max,min,stddev,count
+
+[D1]
+rate=1 s
+protocol=thies10bit
+active=true
+switch_active=false
+switch_id=S1
+switch_pretime=1 min
+sensor=0
+statistics=avg_scalar,max,min,stddev,count
+
+[D2]
+rate=1 s
+protocol=thies10bit
+active=true
+switch_active=false
+switch_id=S1
+switch_pretime=1 min
+sensor=0
+statistics=avg_scalar,max,min,stddev,count
+
+[D3]
+rate=1 s
+protocol=thies10bit
+active=true
+switch_active=false
+switch_id=S1
+switch_pretime=1 min
+sensor=0
+statistics=avg_scalar,max,min,stddev,count
+
+[D4]
+rate=1 s
+protocol=none
+active=false
+switch_active=false
+switch_id=S1
+switch_pretime=1 min
+sensor=0
+statistics=avg_scalar,max,min,stddev,count
+
+[Master]
+rate=1 s
+serial_setting=38400 8N1
+
+[M1]
+active=false
+protocol_type=None
+sensor_type=MODBUS_OTHER
+address=0
+modbus_start_register=0
+modbus_function_code=4
+modbus_register_quantity=1
+data_type=IEEE754
+word_endianness=high_first
+sensor=0
+statistics=count
+
+[M2]
+active=false
+protocol_type=None
+sensor_type=MODBUS_OTHER
+address=0
+modbus_start_register=0
+modbus_function_code=4
+modbus_register_quantity=1
+data_type=IEEE754
+word_endianness=high_first
+sensor=0
+statistics=count
+
+[M3]
+active=false
+protocol_type=None
+sensor_type=MODBUS_OTHER
+address=0
+modbus_start_register=0
+modbus_function_code=4
+modbus_register_quantity=1
+data_type=IEEE754
+word_endianness=high_first
+sensor=0
+statistics=count
+
+[M4]
+active=false
+protocol_type=None
+sensor_type=MODBUS_OTHER
+address=0
+modbus_start_register=0
+modbus_function_code=4
+modbus_register_quantity=1
+data_type=IEEE754
+word_endianness=high_first
+sensor=0
+statistics=count
+
+[M5]
+active=false
+protocol_type=None
+sensor_type=MODBUS_OTHER
+address=0
+modbus_start_register=0
+modbus_function_code=4
+modbus_register_quantity=1
+data_type=IEEE754
+word_endianness=high_first
+sensor=0
+statistics=count
+
+[M6]
+active=false
+protocol_type=None
+sensor_type=MODBUS_OTHER
+address=0
+modbus_start_register=0
+modbus_function_code=4
+modbus_register_quantity=1
+data_type=IEEE754
+word_endianness=high_first
+sensor=0
+statistics=count
+
+[M7]
+active=false
+protocol_type=None
+sensor_type=MODBUS_OTHER
+address=0
+modbus_start_register=0
+modbus_function_code=4
+modbus_register_quantity=1
+data_type=IEEE754
+word_endianness=high_first
+sensor=0
+statistics=count
+
+[M8]
+active=false
+protocol_type=None
+sensor_type=MODBUS_OTHER
+address=0
+modbus_start_register=0
+modbus_function_code=4
+modbus_register_quantity=1
+data_type=IEEE754
+word_endianness=high_first
+sensor=0
+statistics=count
+
+[Summary]
+source_data_storage_used=unknown
+
+[Adjustment]
+CS1=200.41 μA
+CS2=200.00 μA
+
+[I]
+statistics=avg_scalar,max,min
+active=true
+
+[V]
+statistics=avg_scalar,max,min
+active=true
+
+[T]
+statistics=avg_scalar
+active=true
+
+[addr]
+statistics=min
+active=true
+
+[offset]
+statistics=min
+active=true
+
+[Sensor_2]
+serial_number=05161640
+used_channels=C2
+active=true
+rate=1 s
+type=anemometer
+model=Thies Anemometer First Class Advanced
+label=Anemómetro 2
+order=S11100/S11100H
+evals=2
+height=130
+
+[Eval_2]
+var_offset=0.2284
+slope_unit=m/s/I
+active=true
+type=wind_speed
+offset_unit=m/s
+formula=linear_cnt
+label=Anemómetro 2
+var_slope=0.04603
+var_period=1
+sensors=2
+unit=m/s
+statistics=avg_scalar,max,min,stddev,count
+formula_params=C2,var_period,var_offset,var_slope
+
+[Sensor_3]
+serial_number=05161639
+used_channels=C3
+active=true
+rate=1 s
+type=anemometer
+model=Thies Anemometer First Class Advanced
+label=Anemómetro 3
+order=S11100/S11100H
+evals=3
+height=110
+
+[Eval_3]
+var_offset=0.2367
+slope_unit=m/s/I
+active=true
+type=wind_speed
+offset_unit=m/s
+formula=linear_cnt
+label=Anemómetro 3
+var_slope=0.04597
+var_period=1
+sensors=3
+unit=m/s
+statistics=avg_scalar,max,min,stddev,count
+formula_params=C3,var_period,var_offset,var_slope
+
+[Sensor_1]
+serial_number=05161641
+used_channels=C1
+active=true
+rate=1 s
+type=anemometer
+model=Thies Anemometer First Class Advanced
+label=Anemómetro 1
+order=S11100/S11100H
+evals=1
+height=130
+
+[Eval_1]
+var_offset=0.2326
+slope_unit=m/s/I
+active=true
+type=wind_speed
+offset_unit=m/s
+formula=linear_cnt
+label=Anemómetro 1
+var_slope=0.046
+var_period=1
+sensors=1
+unit=m/s
+statistics=avg_scalar,max,min,stddev,count
+formula_params=C1,var_period,var_offset,var_slope
+
+[Sensor_4]
+serial_number=05161638
+used_channels=C4
+active=true
+rate=1 s
+type=anemometer
+model=Thies Anemometer First Class Advanced
+label=Anemómetro 4
+order=S11100/S11100H
+evals=4
+height=110
+
+[Eval_4]
+var_offset=0.2408
+slope_unit=m/s/I
+active=true
+type=wind_speed
+offset_unit=m/s
+formula=linear_cnt
+label=Anemómetro 4
+var_slope=0.04601
+var_period=1
+sensors=4
+unit=m/s
+statistics=avg_scalar,max,min,stddev,count
+formula_params=C4,var_period,var_offset,var_slope
+
+[Sensor_5]
+serial_number=05161637
+used_channels=C5
+active=true
+rate=1 s
+type=anemometer
+model=Thies Anemometer First Class Advanced
+label=Anemómetro 5
+order=S11100/S11100H
+evals=5
+height=90
+
+[Eval_5]
+var_offset=0.2332
+slope_unit=m/s/I
+active=true
+type=wind_speed
+offset_unit=m/s
+formula=linear_cnt
+label=Anemómetro 5
+var_slope=0.04606
+var_period=1
+sensors=5
+unit=m/s
+statistics=avg_scalar,max,min,stddev,count
+formula_params=C5,var_period,var_offset,var_slope
+
+[Sensor_10]
+needs_switch=1 s
+used_channels=A1
+serial_number=B150001
+active=true
+rate=1 s
+type=barometer
+model=Barometric Pressure Sensor AB60
+label=Barómetro 1
+switch_pretime=1 s
+adc_range_u=10 V
+order=S31100
+evals=10
+height=12
+
+[Eval_10]
+var_offset=800
+slope_unit=mbar/V
+active=true
+type=air_pressure
+offset_unit=mbar
+formula=linear
+label=Barómetro 1
+var_slope=60
+sensors=10
+unit=mbar
+statistics=avg_scalar,max,min,stddev,count
+formula_params=A1,var_offset,var_slope
+
+[Sensor_11]
+needs_switch=1 s
+used_channels=A2,A3
+serial_number=164371
+active=true
+rate=1 s
+type=hygro_thermo
+model=Galltec Hygro-Thermo Active KP
+label=Hygro
+switch_pretime=1 s
+adc_range_u=10 V;1 V
+order=S52100
+evals=11,12
+height=15
+
+[Eval_11]
+var_offset=0
+slope_unit=%/V
+active=true
+type=humidity
+offset_unit=%
+formula=linear_humidity
+label=Hygro
+var_clip=100
+var_slope=100
+sensors=11
+unit=%
+statistics=avg_scalar,max,min,stddev,count
+formula_params=A2,var_clip,var_offset,var_slope
+
+[Eval_12]
+var_offset=-30
+slope_unit=°C/V
+active=true
+type=temperature
+offset_unit=°C
+formula=linear
+label=Hygro
+var_slope=100
+sensors=11
+unit=°C
+statistics=avg_scalar,max,min,stddev,count
+formula_params=A3,var_offset,var_slope
+
+[Sensor_9]
+serial_number=08150193
+used_channels=D3
+active=true
+rate=1 s
+type=wind_vane
+model=Thies Wind Vane 10 Bits Serial Synchron
+label=Veleta 3
+order=S21100H
+evals=9
+height=88
+digital_protocol=thies10bit
+
+[Eval_9]
+var_offset=236
+active=true
+type=wind_direction
+offset_unit=°
+formula=windvane_dig
+label=Veleta 3
+var_slope=0.3515625
+sensors=9
+unit=°
+statistics=avg_vector,stddev_vector,count
+formula_params=D3,var_offset,var_slope
+
+[Sensor_7]
+serial_number=01160220
+used_channels=D1
+active=true
+rate=1 s
+type=wind_vane
+model=Thies Wind Vane 10 Bits Serial Synchron
+label=Veleta 1
+order=S21100H
+evals=7
+height=128
+digital_protocol=thies10bit
+
+[Eval_7]
+var_offset=236
+active=true
+type=wind_direction
+offset_unit=°
+formula=windvane_dig
+label=Veleta 1
+var_slope=0.3515625
+sensors=7
+unit=°
+statistics=avg_vector,stddev_vector,count
+formula_params=D1,var_offset,var_slope
+
+[Sensor_8]
+serial_number=01160215
+used_channels=D2
+active=true
+rate=1 s
+type=wind_vane
+model=Thies Wind Vane 10 Bits Serial Synchron
+label=Veleta 2
+order=S21100H
+evals=8
+height=108
+digital_protocol=thies10bit
+
+[Eval_8]
+var_offset=236
+active=true
+type=wind_direction
+offset_unit=°
+formula=windvane_dig
+label=Veleta 2
+var_slope=0.3515625
+sensors=8
+unit=°
+statistics=avg_vector,stddev_vector,count
+formula_params=D2,var_offset,var_slope
+
+[Sensor_6]
+serial_number=05161636
+used_channels=C6
+active=true
+rate=1 s
+type=anemometer
+model=Thies Anemometer First Class Advanced
+label=Anemómetro 6
+order=S11100/S11100H
+evals=6
+height=90
+
+[Eval_6]
+var_offset=0.2101
+slope_unit=m/s/I
+active=true
+type=wind_speed
+offset_unit=m/s
+formula=linear_cnt
+label=Anemómetro 6
+var_slope=0.04616
+var_period=1
+sensors=6
+unit=m/s
+statistics=avg_scalar,max,min,stddev,count
+formula_params=C6,var_period,var_offset,var_slope
+
+[switches_state]
+statistics=first
+active=true

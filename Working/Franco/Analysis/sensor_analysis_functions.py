@@ -25,8 +25,15 @@ from matplotlib import pyplot
 import matplotlib.pyplot as plt
 import re
 import itertools
-
+import os
 from tqdm import tqdm
+from operator import itemgetter
+from itertools import *
+
+import plotly.offline as pyo
+import plotly_express as px
+
+import glob
 
 
 # In[5]:
@@ -146,7 +153,7 @@ def plotting_anem_parameter_tunning(df, ratio_range=30, correlation_range=10):
     for ratio in tqdm(range(2, ratio_range)):
         for correlation in range(0, correlation_range):
             correlation = round(correlation *.1, 2)
-            df_to_plot_stats = construct_stats(df_to_plot, sensor='anem', func=['correlation', 'ratio'], window=10, ratio_th = ratio, correlation_th = correlation)
+            df_to_plot_stats = fault_detection(df_to_plot, sensor='anem', correlation_window=10, ratio_th = ratio, correlation_th = correlation)
         
             ratio_cols = df_to_plot_stats.columns[df_to_plot_stats.columns.str.contains('_ratio\*_anomaly')]
             correlation_cols = df_to_plot_stats.columns[df_to_plot_stats.columns.str.contains('_correlation\*_anomaly')]
@@ -206,12 +213,112 @@ def plotting_anem_parameter_tunning(df, ratio_range=30, correlation_range=10):
         plt.show()
 
 
-# In[10]:
+# In[2]:
 
 
-def plot_sensors(df, index_start, index_finish=0, sensors=[]):
-    index_to_plot = index_start + 20 + index_finish
-    df.loc[index_start:index_to_plot, sensors].plot(figsize=(25, 15))
+def plot_sensors(df, index_start, sensors=[]):
+
+    time_col = df.columns[df.columns.str.contains('Time')]
+    
+    df_to_plot = df.loc[index_start - 50:index_start+50, sensors]
+    df_to_plot['step'] = df.loc[index_start - 50:index_start+50, time_col]
+    
+    df_melt = df_to_plot.melt(id_vars='step', value_vars=sensors)
+    
+    fig = px.line(df_melt, x='step', y='value', color='variable')
+    
+    return fig
+
+
+# In[4]:
+
+
+def get_index_list(df, sensor):
+    df.loc[df['broken?'].str.contains(sensor), sensor + '_index'] = 1
+    df.loc[~df['broken?'].str.contains(sensor), sensor + '_index'] = 0
+
+    indexes = df.loc[df[sensor + '_index'] == 1, :].index
+
+    return indexes
+
+
+# In[5]:
+
+
+def split_kneighbor_indexes(number_list, k):
+    
+    groups = []
+    start = 0
+    
+    for idx, val in enumerate(number_list[1:], start = 1):
+        if number_list[idx] - number_list[idx-1]  > k:
+            stop = idx
+            groups.append(number_list[start:stop])
+            start = stop + 1
+        else:
+            pass
+        
+    groups = [x for x in groups if x.size > 5]
+    return groups
+
+
+# In[2]:
+
+
+def generate_dashboard(df, redundance_dict={}):
+    anem_columns = df.columns[df.columns.str.contains('Anem')]
+    
+    anem_dict = {}
+    for col in anem_columns:
+        indexes = get_index_list(df, col) 
+        anem_dict[col] = split_kneighbor_indexes(indexes, 12)
+    
+    
+    dir_name = str(df.name)
+    try:
+        os.makedirs(dir_name)
+    except:
+        print("Already exists...")
+        
+    for key, values in anem_dict.items():
+        
+        html = '<html><body>' 
+        try:
+            os.makedirs(f'anomaly_html/{dir_name}/{key}')
+        except:
+            print("Already exists...")
+        for value in values:
+            fig = plot_sensors(df, value[0], sensors=[key, redundance_dict[key]])
+            fig.write_html(f'anomaly_html/{dir_name}/{key}/{key}-{value[0]}.html', full_html=False)   
+    
+        cont = 0
+        for file in tqdm(glob.glob(f"anomaly_html/{dir_name}/{key}/*.html")):
+            html += '<div><h3> Anomalia: '+ str(cont+1) +' en el sensor: '+ key +'</h3></div>'
+            cont +=1
+            f = open(file, 'r', encoding='utf-8')
+            f = f.read()
+            html += str(f)
+
+        html += '</body></html>'
+
+        Html_file = open(f"{dir_name}/filename_{key}.html","w")
+        Html_file.write(html)
+        Html_file.close()
+
+
+# In[24]:
+
+
+#html = '<html><body>' #add anything else in here or even better 
+                      #use a template that you read and complement
+#lastDate = None
+#for r in htmlfiles:
+#    print(r)
+    #if not lastDate or not lastDate == r[1]:
+        #html += '<h3>%s</h3>' % (str(r[1]))
+    #html += '<a href="%s">Your Report Title</a>' % (r[0])
+
+#return html #or even better, write it to the disk.
 
 
 # In[ ]:
