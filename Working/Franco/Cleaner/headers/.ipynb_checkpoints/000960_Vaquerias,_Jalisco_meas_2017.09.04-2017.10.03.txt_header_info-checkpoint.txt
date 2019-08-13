@@ -1,0 +1,1854 @@
+"NRG Systems SymphoniePRO Desktop Application"
+"Software Version:	3.2.0.145 (build built by CI server 2018-01-15)"
+"Export version:	1"
+"Generated:	2018-02-13 15:05:54"
+User:	NRGSYSTEMS\ajl
+"Export Parameters"
+"Site Number:	000960"
+"Data Type:	Measurements"
+"Start Date:	"
+"End Date:	"
+"Filters Applied:	False"
+"Configuration: Default"
+"Site Properties"
+"Site Description:	Vaquerias Jalisco"
+Project:	ECH2
+Tower:	
+"Location:	vaquerias jalisco"
+"Coordinate System:	WGS84"
+Latitude:	21.6626933
+Longitude:	-101.7159716
+Elevation:	2454
+"Time Zone:	UTC-6:00"
+"Site Units:	SI"
+"Logger History"
+"Date:	2017-09-04 10:28:43"
+"Model:	SymphoniePRO Logger (8206)"
+"Serial Number:	820600960"
+Firmware:	2.2.4
+"iPack History"
+"Date:	2017-09-04 10:28:43"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-09-04 10:31:21"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-09-04 17:30:47"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-09-05 00:00:00"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	2.1.0
+"Date:	2017-09-05 10:54:53"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-09-05 11:51:31"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	2.1.0
+"Date:	2017-09-05 14:34:54"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-09-05 14:54:44"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	2.1.0
+"Date:	2017-09-06 11:50:00"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	0.0.0
+"Date:	2017-09-08 11:50:00"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	2.1.0
+"Date:	2017-09-19 19:44:05"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-09-20 00:00:00"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	2.1.0
+"Date:	2017-09-27 16:10:31"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-09-28 00:00:00"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	2.1.0
+"Sensor History"
+Channel:	1
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Anemometer
+"Description:	Anemometer 1"
+"Serial Number:	596600006560"
+Height:	120.00
+Bearing:	50.00
+"Scale Factor:	0.76515"
+Offset:	0.22192
+Units:	m/s
+Channel:	1
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Anemometer
+"Description:	Anemometer 1"
+"Serial Number:	596600006246"
+Height:	94.00
+Bearing:	115.00
+"Scale Factor:	0.76515"
+Offset:	0.22192
+Units:	m/s
+Channel:	1
+"Effective Date:	2017-09-05 15:14:36"
+Type:	Anemometer
+"Description:	Anemometer 1"
+"Serial Number:	596600006246"
+Height:	94.00
+Bearing:	115.00
+"Scale Factor:	0.76089"
+Offset:	0.24476
+Units:	m/s
+Channel:	1
+"Effective Date:	2017-09-05 15:37:21"
+Type:	Anemometer
+"Description:	Anemo 1 RNRG Class1"
+"Serial Number:	596600006246"
+Height:	94.00
+Bearing:	115.00
+"Scale Factor:	0.76089"
+Offset:	0.24476
+Units:	m/s
+Channel:	1
+"Effective Date:	2017-09-27 11:44:00"
+Type:	Anemometer
+"Description:	Anemo 1 RNRG Class1"
+"Serial Number:	596600007226"
+Height:	94.00
+Bearing:	115.00
+"Scale Factor:	0.76097"
+Offset:	0.24180
+Units:	m/s
+Channel:	2
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Anemometer
+"Description:	Anemometer 2"
+"Serial Number:	09163278"
+Height:	120.00
+Bearing:	230.00
+"Scale Factor:	0.04619"
+Offset:	0.23820
+Units:	m/s
+Channel:	2
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Anemometer
+"Description:	Thies FCA"
+"Serial Number:	09163306"
+Height:	94.00
+Bearing:	29.00
+"Scale Factor:	0.04620"
+Offset:	0.21000
+Units:	m/s
+Channel:	2
+"Effective Date:	2017-09-05 15:14:36"
+Type:	Anemometer
+"Description:	Thies FCA"
+"Serial Number:	09163306"
+Height:	94.00
+Bearing:	29.00
+"Scale Factor:	0.04622"
+Offset:	0.24188
+Units:	m/s
+Channel:	2
+"Effective Date:	2017-09-05 15:37:53"
+Type:	Anemometer
+"Description:	Anemo  2 Thies FCA"
+"Serial Number:	09163306"
+Height:	94.00
+Bearing:	29.00
+"Scale Factor:	0.04622"
+Offset:	0.24188
+Units:	m/s
+Channel:	3
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Anemometer
+"Description:	Anemometer 3"
+"Serial Number:	09163279"
+Height:	100.00
+Bearing:	230.00
+"Scale Factor:	0.04627"
+Offset:	0.23845
+Units:	m/s
+Channel:	3
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	596600006253"
+Height:	74.00
+Bearing:	295.00
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	3
+"Effective Date:	2017-09-05 15:14:36"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	596600006253"
+Height:	74.00
+Bearing:	295.00
+"Scale Factor:	0.76012"
+Offset:	0.26849
+Units:	m/s
+Channel:	3
+"Effective Date:	2017-09-05 15:40:55"
+Type:	Anemometer
+"Description:	Anemo 3 RNRG Class "
+"Serial Number:	596600006253"
+Height:	74.00
+Bearing:	295.00
+"Scale Factor:	0.76012"
+Offset:	0.26849
+Units:	m/s
+Channel:	4
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Anemometer
+"Description:	Anemometer 4"
+"Serial Number:	596600006561"
+Height:	80.00
+Bearing:	50.00
+"Scale Factor:	0.76274"
+Offset:	0.23843
+Units:	m/s
+Channel:	4
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Anemometer
+"Description:	Anemometer 4"
+"Serial Number:	82473"
+Height:	50.00
+Bearing:	115.00
+"Scale Factor:	0.76274"
+Offset:	0.23843
+Units:	m/s
+Channel:	4
+"Effective Date:	2017-09-05 15:27:04"
+Type:	Anemometer
+"Description:	Anemometer 4"
+"Serial Number:	82473"
+Height:	50.00
+Bearing:	115.00
+"Scale Factor:	0.76500"
+Offset:	0.35000
+Units:	m/s
+Channel:	4
+"Effective Date:	2017-09-05 15:34:31"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	82473"
+Height:	50.00
+Bearing:	115.00
+"Scale Factor:	0.76500"
+Offset:	0.35000
+Units:	m/s
+Channel:	4
+"Effective Date:	2017-09-05 15:40:55"
+Type:	Anemometer
+"Description:	Anemo 4 RNRG Class "
+"Serial Number:	82473"
+Height:	50.00
+Bearing:	115.00
+"Scale Factor:	0.76500"
+Offset:	0.35000
+Units:	m/s
+Channel:	4
+"Effective Date:	2017-09-07 11:45:49"
+Type:	Anemometer
+"Description:	Anemo 4 RNRG Class "
+"Serial Number:	179500182473"
+Height:	50.00
+Bearing:	115.00
+"Scale Factor:	0.76400"
+Offset:	0.41000
+Units:	m/s
+Channel:	5
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Anemometer
+"Description:	Anemometer 5"
+"Serial Number:	09163280"
+Height:	80.00
+Bearing:	230.00
+"Scale Factor:	0.04628"
+Offset:	0.22588
+Units:	m/s
+Channel:	5
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	596600006254"
+Height:	50.00
+Bearing:	295.00
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	5
+"Effective Date:	2017-09-05 15:14:36"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	596600006254"
+Height:	50.00
+Bearing:	295.00
+"Scale Factor:	0.76340"
+Offset:	0.23962
+Units:	m/s
+Channel:	5
+"Effective Date:	2017-09-05 15:40:55"
+Type:	Anemometer
+"Description:	Anemo 5 RNRG Class "
+"Serial Number:	596600006254"
+Height:	50.00
+Bearing:	295.00
+"Scale Factor:	0.76340"
+Offset:	0.23962
+Units:	m/s
+Channel:	6
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Anemometer
+"Description:	Anemometer 6"
+"Serial Number:	09163281"
+Height:	60.00
+Bearing:	230.00
+"Scale Factor:	0.04614"
+Offset:	0.24740
+Units:	m/s
+Channel:	6
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Anemometer
+"Description:	Anemometer 6"
+"Serial Number:	82469"
+Height:	30.00
+Bearing:	115.00
+"Scale Factor:	0.04614"
+Offset:	0.24740
+Units:	m/s
+Channel:	6
+"Effective Date:	2017-09-05 15:27:04"
+Type:	Anemometer
+"Description:	Anemometer 6"
+"Serial Number:	82469"
+Height:	30.00
+Bearing:	115.00
+"Scale Factor:	0.76500"
+Offset:	0.35000
+Units:	m/s
+Channel:	6
+"Effective Date:	2017-09-05 15:35:42"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	82469"
+Height:	30.00
+Bearing:	115.00
+"Scale Factor:	0.76500"
+Offset:	0.35000
+Units:	m/s
+Channel:	6
+"Effective Date:	2017-09-05 15:40:55"
+Type:	Anemometer
+"Description:	Anemo 6 RNRG Class "
+"Serial Number:	82469"
+Height:	30.00
+Bearing:	115.00
+"Scale Factor:	0.76500"
+Offset:	0.35000
+Units:	m/s
+Channel:	6
+"Effective Date:	2017-09-07 11:44:08"
+Type:	Anemometer
+"Description:	Anemo 6 RNRG Class "
+"Serial Number:	179500182469"
+Height:	30.00
+Bearing:	115.00
+"Scale Factor:	0.76600"
+Offset:	0.36000
+Units:	m/s
+Channel:	7
+"Effective Date:	2017-09-06 11:55:37"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	"
+Height:	
+Bearing:	
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	8
+"Effective Date:	2017-09-06 11:55:37"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	"
+Height:	
+Bearing:	
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	9
+"Effective Date:	2017-09-06 11:55:37"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	"
+Height:	
+Bearing:	
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	10
+"Effective Date:	2017-09-06 11:55:37"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	"
+Height:	
+Bearing:	
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	11
+"Effective Date:	2017-09-06 11:55:37"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	"
+Height:	
+Bearing:	
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	12
+"Effective Date:	2017-09-06 11:52:56"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	"
+Height:	
+Bearing:	
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	13
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Vane
+"Description:	Vane 1"
+"Serial Number:	179900009535"
+Height:	118.00
+Bearing:	50.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	13
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Vane
+"Description:	RNRG 200P Vane"
+"Serial Number:	"
+Height:	92.00
+Bearing:	295.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	13
+"Effective Date:	2017-09-05 14:54:44"
+Type:	Vane
+"Description:	RNRG 200P Vane"
+"Serial Number:	179900011072"
+Height:	92.00
+Bearing:	295.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	13
+"Effective Date:	2017-09-05 15:40:55"
+Type:	Vane
+"Description:	Vane 1 RNRG 200P"
+"Serial Number:	179900011072"
+Height:	92.00
+Bearing:	295.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	13
+"Effective Date:	2017-09-08 13:32:42"
+Type:	Vane
+"Description:	Vane 1 RNRG 200P"
+"Serial Number:	179900011072"
+Height:	92.00
+Bearing:	303.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	14
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Vane
+"Description:	Vane 2"
+"Serial Number:	179900009542"
+Height:	118.00
+Bearing:	230.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	14
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Vane
+"Description:	RNRG 200P Vane"
+"Serial Number:	"
+Height:	72.00
+Bearing:	295.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	14
+"Effective Date:	2017-09-05 15:40:55"
+Type:	Vane
+"Description:	Vane 2 RNRG 200P "
+"Serial Number:	"
+Height:	72.00
+Bearing:	295.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	15
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Vane
+"Description:	Vane 3"
+"Serial Number:	179900009547"
+Height:	78.00
+Bearing:	50.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	16
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Analog
+Description:	Temperature
+"Serial Number:	"
+Height:	116.00
+Bearing:	180.00
+"Scale Factor:	55.55000"
+Offset:	-86.38000
+Units:	C
+Channel:	16
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Analog
+"Description:	RNRG 110S Temp"
+"Serial Number:	"
+Height:	0.00
+Bearing:	0.00
+"Scale Factor:	55.55000"
+Offset:	-86.38000
+Units:	C
+Channel:	16
+"Effective Date:	2017-09-05 15:41:57"
+Type:	Analog
+"Description:	RNRG 110S Temp"
+"Serial Number:	"
+Height:	10.00
+Bearing:	0.00
+"Scale Factor:	55.55000"
+Offset:	-86.38000
+Units:	C
+Channel:	16
+"Effective Date:	2017-09-05 15:43:13"
+Type:	Analog
+"Description:	Temp RNRG 110S "
+"Serial Number:	"
+Height:	10.00
+Bearing:	0.00
+"Scale Factor:	55.55000"
+Offset:	-86.38000
+Units:	C
+Channel:	17
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Analog
+Description:	Temperature
+"Serial Number:	"
+Height:	20.00
+Bearing:	180.00
+"Scale Factor:	55.55000"
+Offset:	-86.38000
+Units:	C
+Channel:	17
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Analog
+"Description:	RNRG BP20 Baro"
+"Serial Number:	"
+Height:	0.00
+Bearing:	0.00
+"Scale Factor:	217.90000"
+Offset:	105.50000
+Units:	mb
+Channel:	17
+"Effective Date:	2017-09-05 15:17:20"
+Type:	Analog
+"Description:	RNRG BP20 Baro"
+"Serial Number:	180531625"
+Height:	0.00
+Bearing:	0.00
+"Scale Factor:	217.90000"
+Offset:	105.90000
+Units:	mb
+Channel:	17
+"Effective Date:	2017-09-05 15:43:13"
+Type:	Analog
+"Description:	Baro RNRG BP20 "
+"Serial Number:	180531625"
+Height:	6.50
+Bearing:	0.00
+"Scale Factor:	217.90000"
+Offset:	105.90000
+Units:	mb
+Channel:	18
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Analog
+"Description:	RH Humidity"
+"Serial Number:	"
+Height:	20.00
+Bearing:	
+"Scale Factor:	20.00000"
+Offset:	0.00000
+Units:	%RH
+Channel:	19
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Analog
+Description:	Barometer
+"Serial Number:	180531830"
+Height:	20.00
+Bearing:	
+"Scale Factor:	217.90000"
+Offset:	106.00000
+Units:	mb
+Data
+"NRG Systems SymphoniePRO Desktop Application"
+"Software Version:	3.2.0.145 (build built by CI server 2018-01-15)"
+"Export version:	1"
+"Generated:	2018-02-13 15:05:54"
+User:	NRGSYSTEMS\ajl
+"Export Parameters"
+"Site Number:	000960"
+"Data Type:	Measurements"
+"Start Date:	"
+"End Date:	"
+"Filters Applied:	False"
+"Configuration: Default"
+"Site Properties"
+"Site Description:	Vaquerias Jalisco"
+Project:	ECH2
+Tower:	
+"Location:	vaquerias jalisco"
+"Coordinate System:	WGS84"
+Latitude:	21.6626933
+Longitude:	-101.7159716
+Elevation:	2454
+"Time Zone:	UTC-6:00"
+"Site Units:	SI"
+"Logger History"
+"Date:	2017-09-04 10:28:43"
+"Model:	SymphoniePRO Logger (8206)"
+"Serial Number:	820600960"
+Firmware:	2.2.4
+"iPack History"
+"Date:	2017-09-04 10:28:43"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-09-04 10:31:21"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-09-04 17:30:47"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-09-05 00:00:00"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	2.1.0
+"Date:	2017-09-05 10:54:53"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-09-05 11:51:31"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	2.1.0
+"Date:	2017-09-05 14:34:54"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-09-05 14:54:44"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	2.1.0
+"Date:	2017-09-06 11:50:00"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	0.0.0
+"Date:	2017-09-08 11:50:00"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	2.1.0
+"Date:	2017-09-19 19:44:05"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-09-20 00:00:00"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	2.1.0
+"Date:	2017-09-27 16:10:31"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-09-28 00:00:00"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	2.1.0
+"Sensor History"
+Channel:	1
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Anemometer
+"Description:	Anemometer 1"
+"Serial Number:	596600006560"
+Height:	120.00
+Bearing:	50.00
+"Scale Factor:	0.76515"
+Offset:	0.22192
+Units:	m/s
+Channel:	1
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Anemometer
+"Description:	Anemometer 1"
+"Serial Number:	596600006246"
+Height:	94.00
+Bearing:	115.00
+"Scale Factor:	0.76515"
+Offset:	0.22192
+Units:	m/s
+Channel:	1
+"Effective Date:	2017-09-05 15:14:36"
+Type:	Anemometer
+"Description:	Anemometer 1"
+"Serial Number:	596600006246"
+Height:	94.00
+Bearing:	115.00
+"Scale Factor:	0.76089"
+Offset:	0.24476
+Units:	m/s
+Channel:	1
+"Effective Date:	2017-09-05 15:37:21"
+Type:	Anemometer
+"Description:	Anemo 1 RNRG Class1"
+"Serial Number:	596600006246"
+Height:	94.00
+Bearing:	115.00
+"Scale Factor:	0.76089"
+Offset:	0.24476
+Units:	m/s
+Channel:	1
+"Effective Date:	2017-09-27 11:44:00"
+Type:	Anemometer
+"Description:	Anemo 1 RNRG Class1"
+"Serial Number:	596600007226"
+Height:	94.00
+Bearing:	115.00
+"Scale Factor:	0.76097"
+Offset:	0.24180
+Units:	m/s
+Channel:	2
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Anemometer
+"Description:	Anemometer 2"
+"Serial Number:	09163278"
+Height:	120.00
+Bearing:	230.00
+"Scale Factor:	0.04619"
+Offset:	0.23820
+Units:	m/s
+Channel:	2
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Anemometer
+"Description:	Thies FCA"
+"Serial Number:	09163306"
+Height:	94.00
+Bearing:	29.00
+"Scale Factor:	0.04620"
+Offset:	0.21000
+Units:	m/s
+Channel:	2
+"Effective Date:	2017-09-05 15:14:36"
+Type:	Anemometer
+"Description:	Thies FCA"
+"Serial Number:	09163306"
+Height:	94.00
+Bearing:	29.00
+"Scale Factor:	0.04622"
+Offset:	0.24188
+Units:	m/s
+Channel:	2
+"Effective Date:	2017-09-05 15:37:53"
+Type:	Anemometer
+"Description:	Anemo  2 Thies FCA"
+"Serial Number:	09163306"
+Height:	94.00
+Bearing:	29.00
+"Scale Factor:	0.04622"
+Offset:	0.24188
+Units:	m/s
+Channel:	3
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Anemometer
+"Description:	Anemometer 3"
+"Serial Number:	09163279"
+Height:	100.00
+Bearing:	230.00
+"Scale Factor:	0.04627"
+Offset:	0.23845
+Units:	m/s
+Channel:	3
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	596600006253"
+Height:	74.00
+Bearing:	295.00
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	3
+"Effective Date:	2017-09-05 15:14:36"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	596600006253"
+Height:	74.00
+Bearing:	295.00
+"Scale Factor:	0.76012"
+Offset:	0.26849
+Units:	m/s
+Channel:	3
+"Effective Date:	2017-09-05 15:40:55"
+Type:	Anemometer
+"Description:	Anemo 3 RNRG Class "
+"Serial Number:	596600006253"
+Height:	74.00
+Bearing:	295.00
+"Scale Factor:	0.76012"
+Offset:	0.26849
+Units:	m/s
+Channel:	4
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Anemometer
+"Description:	Anemometer 4"
+"Serial Number:	596600006561"
+Height:	80.00
+Bearing:	50.00
+"Scale Factor:	0.76274"
+Offset:	0.23843
+Units:	m/s
+Channel:	4
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Anemometer
+"Description:	Anemometer 4"
+"Serial Number:	82473"
+Height:	50.00
+Bearing:	115.00
+"Scale Factor:	0.76274"
+Offset:	0.23843
+Units:	m/s
+Channel:	4
+"Effective Date:	2017-09-05 15:27:04"
+Type:	Anemometer
+"Description:	Anemometer 4"
+"Serial Number:	82473"
+Height:	50.00
+Bearing:	115.00
+"Scale Factor:	0.76500"
+Offset:	0.35000
+Units:	m/s
+Channel:	4
+"Effective Date:	2017-09-05 15:34:31"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	82473"
+Height:	50.00
+Bearing:	115.00
+"Scale Factor:	0.76500"
+Offset:	0.35000
+Units:	m/s
+Channel:	4
+"Effective Date:	2017-09-05 15:40:55"
+Type:	Anemometer
+"Description:	Anemo 4 RNRG Class "
+"Serial Number:	82473"
+Height:	50.00
+Bearing:	115.00
+"Scale Factor:	0.76500"
+Offset:	0.35000
+Units:	m/s
+Channel:	4
+"Effective Date:	2017-09-07 11:45:49"
+Type:	Anemometer
+"Description:	Anemo 4 RNRG Class "
+"Serial Number:	179500182473"
+Height:	50.00
+Bearing:	115.00
+"Scale Factor:	0.76400"
+Offset:	0.41000
+Units:	m/s
+Channel:	5
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Anemometer
+"Description:	Anemometer 5"
+"Serial Number:	09163280"
+Height:	80.00
+Bearing:	230.00
+"Scale Factor:	0.04628"
+Offset:	0.22588
+Units:	m/s
+Channel:	5
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	596600006254"
+Height:	50.00
+Bearing:	295.00
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	5
+"Effective Date:	2017-09-05 15:14:36"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	596600006254"
+Height:	50.00
+Bearing:	295.00
+"Scale Factor:	0.76340"
+Offset:	0.23962
+Units:	m/s
+Channel:	5
+"Effective Date:	2017-09-05 15:40:55"
+Type:	Anemometer
+"Description:	Anemo 5 RNRG Class "
+"Serial Number:	596600006254"
+Height:	50.00
+Bearing:	295.00
+"Scale Factor:	0.76340"
+Offset:	0.23962
+Units:	m/s
+Channel:	6
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Anemometer
+"Description:	Anemometer 6"
+"Serial Number:	09163281"
+Height:	60.00
+Bearing:	230.00
+"Scale Factor:	0.04614"
+Offset:	0.24740
+Units:	m/s
+Channel:	6
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Anemometer
+"Description:	Anemometer 6"
+"Serial Number:	82469"
+Height:	30.00
+Bearing:	115.00
+"Scale Factor:	0.04614"
+Offset:	0.24740
+Units:	m/s
+Channel:	6
+"Effective Date:	2017-09-05 15:27:04"
+Type:	Anemometer
+"Description:	Anemometer 6"
+"Serial Number:	82469"
+Height:	30.00
+Bearing:	115.00
+"Scale Factor:	0.76500"
+Offset:	0.35000
+Units:	m/s
+Channel:	6
+"Effective Date:	2017-09-05 15:35:42"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	82469"
+Height:	30.00
+Bearing:	115.00
+"Scale Factor:	0.76500"
+Offset:	0.35000
+Units:	m/s
+Channel:	6
+"Effective Date:	2017-09-05 15:40:55"
+Type:	Anemometer
+"Description:	Anemo 6 RNRG Class "
+"Serial Number:	82469"
+Height:	30.00
+Bearing:	115.00
+"Scale Factor:	0.76500"
+Offset:	0.35000
+Units:	m/s
+Channel:	6
+"Effective Date:	2017-09-07 11:44:08"
+Type:	Anemometer
+"Description:	Anemo 6 RNRG Class "
+"Serial Number:	179500182469"
+Height:	30.00
+Bearing:	115.00
+"Scale Factor:	0.76600"
+Offset:	0.36000
+Units:	m/s
+Channel:	7
+"Effective Date:	2017-09-06 11:55:37"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	"
+Height:	
+Bearing:	
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	8
+"Effective Date:	2017-09-06 11:55:37"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	"
+Height:	
+Bearing:	
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	9
+"Effective Date:	2017-09-06 11:55:37"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	"
+Height:	
+Bearing:	
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	10
+"Effective Date:	2017-09-06 11:55:37"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	"
+Height:	
+Bearing:	
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	11
+"Effective Date:	2017-09-06 11:55:37"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	"
+Height:	
+Bearing:	
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	12
+"Effective Date:	2017-09-06 11:52:56"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	"
+Height:	
+Bearing:	
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	13
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Vane
+"Description:	Vane 1"
+"Serial Number:	179900009535"
+Height:	118.00
+Bearing:	50.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	13
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Vane
+"Description:	RNRG 200P Vane"
+"Serial Number:	"
+Height:	92.00
+Bearing:	295.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	13
+"Effective Date:	2017-09-05 14:54:44"
+Type:	Vane
+"Description:	RNRG 200P Vane"
+"Serial Number:	179900011072"
+Height:	92.00
+Bearing:	295.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	13
+"Effective Date:	2017-09-05 15:40:55"
+Type:	Vane
+"Description:	Vane 1 RNRG 200P"
+"Serial Number:	179900011072"
+Height:	92.00
+Bearing:	295.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	13
+"Effective Date:	2017-09-08 13:32:42"
+Type:	Vane
+"Description:	Vane 1 RNRG 200P"
+"Serial Number:	179900011072"
+Height:	92.00
+Bearing:	303.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	14
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Vane
+"Description:	Vane 2"
+"Serial Number:	179900009542"
+Height:	118.00
+Bearing:	230.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	14
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Vane
+"Description:	RNRG 200P Vane"
+"Serial Number:	"
+Height:	72.00
+Bearing:	295.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	14
+"Effective Date:	2017-09-05 15:40:55"
+Type:	Vane
+"Description:	Vane 2 RNRG 200P "
+"Serial Number:	"
+Height:	72.00
+Bearing:	295.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	15
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Vane
+"Description:	Vane 3"
+"Serial Number:	179900009547"
+Height:	78.00
+Bearing:	50.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	16
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Analog
+Description:	Temperature
+"Serial Number:	"
+Height:	116.00
+Bearing:	180.00
+"Scale Factor:	55.55000"
+Offset:	-86.38000
+Units:	C
+Channel:	16
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Analog
+"Description:	RNRG 110S Temp"
+"Serial Number:	"
+Height:	0.00
+Bearing:	0.00
+"Scale Factor:	55.55000"
+Offset:	-86.38000
+Units:	C
+Channel:	16
+"Effective Date:	2017-09-05 15:41:57"
+Type:	Analog
+"Description:	RNRG 110S Temp"
+"Serial Number:	"
+Height:	10.00
+Bearing:	0.00
+"Scale Factor:	55.55000"
+Offset:	-86.38000
+Units:	C
+Channel:	16
+"Effective Date:	2017-09-05 15:43:13"
+Type:	Analog
+"Description:	Temp RNRG 110S "
+"Serial Number:	"
+Height:	10.00
+Bearing:	0.00
+"Scale Factor:	55.55000"
+Offset:	-86.38000
+Units:	C
+Channel:	17
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Analog
+Description:	Temperature
+"Serial Number:	"
+Height:	20.00
+Bearing:	180.00
+"Scale Factor:	55.55000"
+Offset:	-86.38000
+Units:	C
+Channel:	17
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Analog
+"Description:	RNRG BP20 Baro"
+"Serial Number:	"
+Height:	0.00
+Bearing:	0.00
+"Scale Factor:	217.90000"
+Offset:	105.50000
+Units:	mb
+Channel:	17
+"Effective Date:	2017-09-05 15:17:20"
+Type:	Analog
+"Description:	RNRG BP20 Baro"
+"Serial Number:	180531625"
+Height:	0.00
+Bearing:	0.00
+"Scale Factor:	217.90000"
+Offset:	105.90000
+Units:	mb
+Channel:	17
+"Effective Date:	2017-09-05 15:43:13"
+Type:	Analog
+"Description:	Baro RNRG BP20 "
+"Serial Number:	180531625"
+Height:	6.50
+Bearing:	0.00
+"Scale Factor:	217.90000"
+Offset:	105.90000
+Units:	mb
+Channel:	18
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Analog
+"Description:	RH Humidity"
+"Serial Number:	"
+Height:	20.00
+Bearing:	
+"Scale Factor:	20.00000"
+Offset:	0.00000
+Units:	%RH
+Channel:	19
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Analog
+Description:	Barometer
+"Serial Number:	180531830"
+Height:	20.00
+Bearing:	
+"Scale Factor:	217.90000"
+Offset:	106.00000
+Units:	mb
+Data
+"NRG Systems SymphoniePRO Desktop Application"
+"Software Version:	3.2.0.145 (build built by CI server 2018-01-15)"
+"Export version:	1"
+"Generated:	2018-02-13 15:05:54"
+User:	NRGSYSTEMS\ajl
+"Export Parameters"
+"Site Number:	000960"
+"Data Type:	Measurements"
+"Start Date:	"
+"End Date:	"
+"Filters Applied:	False"
+"Configuration: Default"
+"Site Properties"
+"Site Description:	Vaquerias Jalisco"
+Project:	ECH2
+Tower:	
+"Location:	vaquerias jalisco"
+"Coordinate System:	WGS84"
+Latitude:	21.6626933
+Longitude:	-101.7159716
+Elevation:	2454
+"Time Zone:	UTC-6:00"
+"Site Units:	SI"
+"Logger History"
+"Date:	2017-09-04 10:28:43"
+"Model:	SymphoniePRO Logger (8206)"
+"Serial Number:	820600960"
+Firmware:	2.2.4
+"iPack History"
+"Date:	2017-09-04 10:28:43"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-09-04 10:31:21"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-09-04 17:30:47"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-09-05 00:00:00"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	2.1.0
+"Date:	2017-09-05 10:54:53"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-09-05 11:51:31"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	2.1.0
+"Date:	2017-09-05 14:34:54"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-09-05 14:54:44"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	2.1.0
+"Date:	2017-09-06 11:50:00"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	0.0.0
+"Date:	2017-09-08 11:50:00"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	2.1.0
+"Date:	2017-09-19 19:44:05"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-09-20 00:00:00"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	2.1.0
+"Date:	2017-09-27 16:10:31"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-09-28 00:00:00"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	2.1.0
+"Sensor History"
+Channel:	1
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Anemometer
+"Description:	Anemometer 1"
+"Serial Number:	596600006560"
+Height:	120.00
+Bearing:	50.00
+"Scale Factor:	0.76515"
+Offset:	0.22192
+Units:	m/s
+Channel:	1
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Anemometer
+"Description:	Anemometer 1"
+"Serial Number:	596600006246"
+Height:	94.00
+Bearing:	115.00
+"Scale Factor:	0.76515"
+Offset:	0.22192
+Units:	m/s
+Channel:	1
+"Effective Date:	2017-09-05 15:14:36"
+Type:	Anemometer
+"Description:	Anemometer 1"
+"Serial Number:	596600006246"
+Height:	94.00
+Bearing:	115.00
+"Scale Factor:	0.76089"
+Offset:	0.24476
+Units:	m/s
+Channel:	1
+"Effective Date:	2017-09-05 15:37:21"
+Type:	Anemometer
+"Description:	Anemo 1 RNRG Class1"
+"Serial Number:	596600006246"
+Height:	94.00
+Bearing:	115.00
+"Scale Factor:	0.76089"
+Offset:	0.24476
+Units:	m/s
+Channel:	1
+"Effective Date:	2017-09-27 11:44:00"
+Type:	Anemometer
+"Description:	Anemo 1 RNRG Class1"
+"Serial Number:	596600007226"
+Height:	94.00
+Bearing:	115.00
+"Scale Factor:	0.76097"
+Offset:	0.24180
+Units:	m/s
+Channel:	2
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Anemometer
+"Description:	Anemometer 2"
+"Serial Number:	09163278"
+Height:	120.00
+Bearing:	230.00
+"Scale Factor:	0.04619"
+Offset:	0.23820
+Units:	m/s
+Channel:	2
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Anemometer
+"Description:	Thies FCA"
+"Serial Number:	09163306"
+Height:	94.00
+Bearing:	29.00
+"Scale Factor:	0.04620"
+Offset:	0.21000
+Units:	m/s
+Channel:	2
+"Effective Date:	2017-09-05 15:14:36"
+Type:	Anemometer
+"Description:	Thies FCA"
+"Serial Number:	09163306"
+Height:	94.00
+Bearing:	29.00
+"Scale Factor:	0.04622"
+Offset:	0.24188
+Units:	m/s
+Channel:	2
+"Effective Date:	2017-09-05 15:37:53"
+Type:	Anemometer
+"Description:	Anemo  2 Thies FCA"
+"Serial Number:	09163306"
+Height:	94.00
+Bearing:	29.00
+"Scale Factor:	0.04622"
+Offset:	0.24188
+Units:	m/s
+Channel:	3
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Anemometer
+"Description:	Anemometer 3"
+"Serial Number:	09163279"
+Height:	100.00
+Bearing:	230.00
+"Scale Factor:	0.04627"
+Offset:	0.23845
+Units:	m/s
+Channel:	3
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	596600006253"
+Height:	74.00
+Bearing:	295.00
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	3
+"Effective Date:	2017-09-05 15:14:36"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	596600006253"
+Height:	74.00
+Bearing:	295.00
+"Scale Factor:	0.76012"
+Offset:	0.26849
+Units:	m/s
+Channel:	3
+"Effective Date:	2017-09-05 15:40:55"
+Type:	Anemometer
+"Description:	Anemo 3 RNRG Class "
+"Serial Number:	596600006253"
+Height:	74.00
+Bearing:	295.00
+"Scale Factor:	0.76012"
+Offset:	0.26849
+Units:	m/s
+Channel:	4
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Anemometer
+"Description:	Anemometer 4"
+"Serial Number:	596600006561"
+Height:	80.00
+Bearing:	50.00
+"Scale Factor:	0.76274"
+Offset:	0.23843
+Units:	m/s
+Channel:	4
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Anemometer
+"Description:	Anemometer 4"
+"Serial Number:	82473"
+Height:	50.00
+Bearing:	115.00
+"Scale Factor:	0.76274"
+Offset:	0.23843
+Units:	m/s
+Channel:	4
+"Effective Date:	2017-09-05 15:27:04"
+Type:	Anemometer
+"Description:	Anemometer 4"
+"Serial Number:	82473"
+Height:	50.00
+Bearing:	115.00
+"Scale Factor:	0.76500"
+Offset:	0.35000
+Units:	m/s
+Channel:	4
+"Effective Date:	2017-09-05 15:34:31"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	82473"
+Height:	50.00
+Bearing:	115.00
+"Scale Factor:	0.76500"
+Offset:	0.35000
+Units:	m/s
+Channel:	4
+"Effective Date:	2017-09-05 15:40:55"
+Type:	Anemometer
+"Description:	Anemo 4 RNRG Class "
+"Serial Number:	82473"
+Height:	50.00
+Bearing:	115.00
+"Scale Factor:	0.76500"
+Offset:	0.35000
+Units:	m/s
+Channel:	4
+"Effective Date:	2017-09-07 11:45:49"
+Type:	Anemometer
+"Description:	Anemo 4 RNRG Class "
+"Serial Number:	179500182473"
+Height:	50.00
+Bearing:	115.00
+"Scale Factor:	0.76400"
+Offset:	0.41000
+Units:	m/s
+Channel:	5
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Anemometer
+"Description:	Anemometer 5"
+"Serial Number:	09163280"
+Height:	80.00
+Bearing:	230.00
+"Scale Factor:	0.04628"
+Offset:	0.22588
+Units:	m/s
+Channel:	5
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	596600006254"
+Height:	50.00
+Bearing:	295.00
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	5
+"Effective Date:	2017-09-05 15:14:36"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	596600006254"
+Height:	50.00
+Bearing:	295.00
+"Scale Factor:	0.76340"
+Offset:	0.23962
+Units:	m/s
+Channel:	5
+"Effective Date:	2017-09-05 15:40:55"
+Type:	Anemometer
+"Description:	Anemo 5 RNRG Class "
+"Serial Number:	596600006254"
+Height:	50.00
+Bearing:	295.00
+"Scale Factor:	0.76340"
+Offset:	0.23962
+Units:	m/s
+Channel:	6
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Anemometer
+"Description:	Anemometer 6"
+"Serial Number:	09163281"
+Height:	60.00
+Bearing:	230.00
+"Scale Factor:	0.04614"
+Offset:	0.24740
+Units:	m/s
+Channel:	6
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Anemometer
+"Description:	Anemometer 6"
+"Serial Number:	82469"
+Height:	30.00
+Bearing:	115.00
+"Scale Factor:	0.04614"
+Offset:	0.24740
+Units:	m/s
+Channel:	6
+"Effective Date:	2017-09-05 15:27:04"
+Type:	Anemometer
+"Description:	Anemometer 6"
+"Serial Number:	82469"
+Height:	30.00
+Bearing:	115.00
+"Scale Factor:	0.76500"
+Offset:	0.35000
+Units:	m/s
+Channel:	6
+"Effective Date:	2017-09-05 15:35:42"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	82469"
+Height:	30.00
+Bearing:	115.00
+"Scale Factor:	0.76500"
+Offset:	0.35000
+Units:	m/s
+Channel:	6
+"Effective Date:	2017-09-05 15:40:55"
+Type:	Anemometer
+"Description:	Anemo 6 RNRG Class "
+"Serial Number:	82469"
+Height:	30.00
+Bearing:	115.00
+"Scale Factor:	0.76500"
+Offset:	0.35000
+Units:	m/s
+Channel:	6
+"Effective Date:	2017-09-07 11:44:08"
+Type:	Anemometer
+"Description:	Anemo 6 RNRG Class "
+"Serial Number:	179500182469"
+Height:	30.00
+Bearing:	115.00
+"Scale Factor:	0.76600"
+Offset:	0.36000
+Units:	m/s
+Channel:	7
+"Effective Date:	2017-09-06 11:55:37"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	"
+Height:	
+Bearing:	
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	8
+"Effective Date:	2017-09-06 11:55:37"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	"
+Height:	
+Bearing:	
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	9
+"Effective Date:	2017-09-06 11:55:37"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	"
+Height:	
+Bearing:	
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	10
+"Effective Date:	2017-09-06 11:55:37"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	"
+Height:	
+Bearing:	
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	11
+"Effective Date:	2017-09-06 11:55:37"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	"
+Height:	
+Bearing:	
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	12
+"Effective Date:	2017-09-06 11:52:56"
+Type:	Anemometer
+"Description:	RNRG Class 1"
+"Serial Number:	"
+Height:	
+Bearing:	
+"Scale Factor:	1.00000"
+Offset:	0.00000
+Units:	m/s
+Channel:	13
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Vane
+"Description:	Vane 1"
+"Serial Number:	179900009535"
+Height:	118.00
+Bearing:	50.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	13
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Vane
+"Description:	RNRG 200P Vane"
+"Serial Number:	"
+Height:	92.00
+Bearing:	295.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	13
+"Effective Date:	2017-09-05 14:54:44"
+Type:	Vane
+"Description:	RNRG 200P Vane"
+"Serial Number:	179900011072"
+Height:	92.00
+Bearing:	295.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	13
+"Effective Date:	2017-09-05 15:40:55"
+Type:	Vane
+"Description:	Vane 1 RNRG 200P"
+"Serial Number:	179900011072"
+Height:	92.00
+Bearing:	295.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	13
+"Effective Date:	2017-09-08 13:32:42"
+Type:	Vane
+"Description:	Vane 1 RNRG 200P"
+"Serial Number:	179900011072"
+Height:	92.00
+Bearing:	303.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	14
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Vane
+"Description:	Vane 2"
+"Serial Number:	179900009542"
+Height:	118.00
+Bearing:	230.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	14
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Vane
+"Description:	RNRG 200P Vane"
+"Serial Number:	"
+Height:	72.00
+Bearing:	295.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	14
+"Effective Date:	2017-09-05 15:40:55"
+Type:	Vane
+"Description:	Vane 2 RNRG 200P "
+"Serial Number:	"
+Height:	72.00
+Bearing:	295.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	15
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Vane
+"Description:	Vane 3"
+"Serial Number:	179900009547"
+Height:	78.00
+Bearing:	50.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	16
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Analog
+Description:	Temperature
+"Serial Number:	"
+Height:	116.00
+Bearing:	180.00
+"Scale Factor:	55.55000"
+Offset:	-86.38000
+Units:	C
+Channel:	16
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Analog
+"Description:	RNRG 110S Temp"
+"Serial Number:	"
+Height:	0.00
+Bearing:	0.00
+"Scale Factor:	55.55000"
+Offset:	-86.38000
+Units:	C
+Channel:	16
+"Effective Date:	2017-09-05 15:41:57"
+Type:	Analog
+"Description:	RNRG 110S Temp"
+"Serial Number:	"
+Height:	10.00
+Bearing:	0.00
+"Scale Factor:	55.55000"
+Offset:	-86.38000
+Units:	C
+Channel:	16
+"Effective Date:	2017-09-05 15:43:13"
+Type:	Analog
+"Description:	Temp RNRG 110S "
+"Serial Number:	"
+Height:	10.00
+Bearing:	0.00
+"Scale Factor:	55.55000"
+Offset:	-86.38000
+Units:	C
+Channel:	17
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Analog
+Description:	Temperature
+"Serial Number:	"
+Height:	20.00
+Bearing:	180.00
+"Scale Factor:	55.55000"
+Offset:	-86.38000
+Units:	C
+Channel:	17
+"Effective Date:	2017-09-05 00:27:07"
+Type:	Analog
+"Description:	RNRG BP20 Baro"
+"Serial Number:	"
+Height:	0.00
+Bearing:	0.00
+"Scale Factor:	217.90000"
+Offset:	105.50000
+Units:	mb
+Channel:	17
+"Effective Date:	2017-09-05 15:17:20"
+Type:	Analog
+"Description:	RNRG BP20 Baro"
+"Serial Number:	180531625"
+Height:	0.00
+Bearing:	0.00
+"Scale Factor:	217.90000"
+Offset:	105.90000
+Units:	mb
+Channel:	17
+"Effective Date:	2017-09-05 15:43:13"
+Type:	Analog
+"Description:	Baro RNRG BP20 "
+"Serial Number:	180531625"
+Height:	6.50
+Bearing:	0.00
+"Scale Factor:	217.90000"
+Offset:	105.90000
+Units:	mb
+Channel:	18
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Analog
+"Description:	RH Humidity"
+"Serial Number:	"
+Height:	20.00
+Bearing:	
+"Scale Factor:	20.00000"
+Offset:	0.00000
+Units:	%RH
+Channel:	19
+"Effective Date:	2017-09-04 10:28:43"
+Type:	Analog
+Description:	Barometer
+"Serial Number:	180531830"
+Height:	20.00
+Bearing:	
+"Scale Factor:	217.90000"
+Offset:	106.00000
+Units:	mb
+Data

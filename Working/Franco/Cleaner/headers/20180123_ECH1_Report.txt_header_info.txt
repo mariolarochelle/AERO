@@ -1,0 +1,151 @@
+SDR	7.8.18
+"-----Logger Information-----"
+"Model #	4280"
+"Serial #	09279"
+"Hardware Rev.	023-022-000"
+"-----Site Information-----"
+"Site #	9202"
+"Site Desc	New Site"
+"Project Code	New"
+"Project Desc	New Project"
+"Site Location	"
+"Site Elevation	002607"
+"Latitude	N 021  41.895'"
+"Longitude	W 101  43.947'"
+"Time offset (hrs)	-6"
+"-----Sensor Information-----"
+"Channel #	1"
+Type	1
+"Description	NRG 50115 58m 270 "
+Details	
+"Serial Number	SN:50115"
+"Height	58   m"
+"Scale Factor	0.765"
+Offset	0.35
+Units	m/s
+"Channel #	2"
+Type	1
+"Description	NRG 50114 42m 270 "
+Details	
+"Serial Number	SN:50114"
+"Height	42   m"
+"Scale Factor	0.765"
+Offset	0.35
+Units	m/s
+"Channel #	3"
+Type	1
+"Description	NRG 06200 94m 270 "
+Details	
+"Serial Number	SN:06200"
+"Height	93   m"
+"Scale Factor	0.765"
+Offset	0.211
+Units	m/s
+"Channel #	4"
+Type	1
+"Description	THIES 63315 94m 90 "
+Details	
+"Serial Number	SN:63315"
+"Height	94   m"
+"Scale Factor	0.046"
+Offset	0.266
+Units	m/s
+"Channel #	5"
+Type	0
+"Description	No SCM Installed"
+Details	
+"Serial Number	--------"
+Height	------
+"Scale Factor	0"
+Offset	0
+Units	-----
+"Channel #	6"
+Type	0
+"Description	No SCM Installed"
+Details	
+"Serial Number	--------"
+Height	------
+"Scale Factor	0"
+Offset	0
+Units	-----
+"Channel #	7"
+Type	3
+"Description	#200P WV 72m 270 "
+Details	
+"Serial Number	SN:"
+"Height	72   m"
+"Scale Factor	0.351"
+Offset	90
+Units	deg
+"Channel #	8"
+Type	3
+"Description	#200P WV 72m 270 "
+Details	
+"Serial Number	SN:"
+"Height	72   m"
+"Scale Factor	0.351"
+Offset	90
+Units	deg
+"Channel #	9"
+Type	4
+"Description	NRG #110S Temp  C"
+Details	
+"Serial Number	SN:"
+Height	0
+"Scale Factor	0.136"
+Offset	-86.381
+Units	C
+"Channel #	10"
+Type	4
+"Description	BP20 31625 12m kPa"
+Details	
+"Serial Number	SN:31625"
+"Height	06   m"
+"Scale Factor	0.0425"
+Offset	65.066
+Units	kPa
+"Channel #	11"
+Type	0
+"Description	No SCM Installed"
+Details	
+"Serial Number	--------"
+Height	------
+"Scale Factor	0"
+Offset	0
+Units	-----
+"Channel #	12"
+Type	4
+"Description	VOLTMETER  V"
+Details	
+"Serial Number	SN:"
+"Height	6    m"
+"Scale Factor	0.021"
+Offset	0
+Units	Volt
+"Channel #	13"
+Type	1
+"Description	NRG 06245 76m 90 "
+Details	
+"Serial Number	SN:06245"
+"Height	76   m"
+"Scale Factor	0.762"
+Offset	0.262
+Units	m/s
+"Channel #	14"
+Type	1
+"Description	NRG 05471 59m 90 "
+Details	
+"Serial Number	SN:05471"
+"Height	59   m"
+"Scale Factor	0.764"
+Offset	0.235
+Units	m/s
+"Channel #	15"
+Type	1
+"Description	NRG #40 Anem. m/s"
+Details	
+"Serial Number	SN:"
+Height	0
+"Scale Factor	0.765"
+Offset	0.35
+Units	m/s

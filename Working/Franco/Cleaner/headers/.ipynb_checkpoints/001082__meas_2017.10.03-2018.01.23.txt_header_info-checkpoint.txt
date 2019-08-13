@@ -1,0 +1,155 @@
+"NRG Systems SymphoniePRO Desktop Application"
+"Software Version:	3.1.4.5 (build built by CI server 2017-11-01)"
+"Export version:	1"
+"Generated:	2018-02-06 00:31:23"
+User:	Nine-PC\Nine
+"Export Parameters"
+"Site Number:	001082"
+"Data Type:	Measurements"
+"Start Date:	2017-10-03"
+"End Date:	2018-01-23"
+"Filters Applied:	False"
+"Configuration: Default"
+"Site Properties"
+"Site Description:	"
+"Project:	Los Altos II"
+Tower:	ECH2
+"Location:	Site Location"
+"Coordinate System:	WGS84"
+Latitude:	21.6626933
+Longitude:	-101.7159716
+Elevation:	2454
+"Time Zone:	UTC+0:00"
+"Site Units:	SI"
+"Logger History"
+"Date:	2017-06-12 13:58:18"
+"Model:	SymphoniePRO Logger (8206)"
+"Serial Number:	820601082"
+Firmware:	2.2.4
+"iPack History"
+"Date:	2017-06-12 13:58:18"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-10-03 21:37:56"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	2.1.0
+"Date:	2017-10-26 16:12:22"
+Model:	None
+"Serial Number:	0"
+Firmware:	0
+"Date:	2017-10-26 16:13:31"
+"Model:	iPackGPS GSM (4622)"
+"Serial Number:	462201825"
+Firmware:	2.1.0
+"Sensor History"
+Channel:	1
+"Effective Date:	2017-10-03 21:08:45"
+Type:	Anemometer
+"Description:	Anemo 1 RNRG Class1"
+"Serial Number:	596600007226"
+Height:	94.00
+Bearing:	115.00
+"Scale Factor:	0.76097"
+Offset:	0.24180
+Units:	m/s
+Channel:	2
+"Effective Date:	2017-10-03 21:08:45"
+Type:	Anemometer
+"Description:	Anemo  2 Thies FCA"
+"Serial Number:	09163306"
+Height:	94.00
+Bearing:	29.00
+"Scale Factor:	0.04622"
+Offset:	0.24188
+Units:	m/s
+Channel:	2
+"Effective Date:	2018-01-23 21:17:28"
+Type:	Anemometer
+"Description:	Anemo  2 Thies FCA"
+"Serial Number:	09163306"
+Height:	94.00
+Bearing:	295.00
+"Scale Factor:	0.04622"
+Offset:	0.24188
+Units:	m/s
+Channel:	3
+"Effective Date:	2017-10-03 21:08:45"
+Type:	Anemometer
+"Description:	Anemo 3 RNRG Class"
+"Serial Number:	596600006253"
+Height:	74.00
+Bearing:	295.00
+"Scale Factor:	0.76012"
+Offset:	0.26849
+Units:	m/s
+Channel:	4
+"Effective Date:	2017-10-03 21:08:45"
+Type:	Anemometer
+"Description:	Anemo 4 RNRG Class"
+"Serial Number:	179500182473"
+Height:	50.00
+Bearing:	115.00
+"Scale Factor:	0.76400"
+Offset:	0.41000
+Units:	m/s
+Channel:	5
+"Effective Date:	2017-10-03 21:08:45"
+Type:	Anemometer
+"Description:	Anemo 5 RNRG Class"
+"Serial Number:	596600006254"
+Height:	50.00
+Bearing:	295.00
+"Scale Factor:	0.76340"
+Offset:	0.23962
+Units:	m/s
+Channel:	6
+"Effective Date:	2017-10-03 21:08:45"
+Type:	Anemometer
+"Description:	Anemo 6 RNRG Class"
+"Serial Number:	179500182469"
+Height:	30.00
+Bearing:	115.00
+"Scale Factor:	0.76600"
+Offset:	0.36000
+Units:	m/s
+Channel:	13
+"Effective Date:	2017-10-03 21:08:45"
+Type:	Vane
+"Description:	Vane 1 RNRG 200P"
+"Serial Number:	179900011072"
+Height:	92.00
+Bearing:	303.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	14
+"Effective Date:	2017-10-03 21:08:45"
+Type:	Vane
+"Description:	Vane 2 RNRG 200P"
+"Serial Number:	"
+Height:	72.00
+Bearing:	295.00
+"Vane Mounting Angle:	180.00"
+Units:	deg
+Channel:	16
+"Effective Date:	2017-10-03 21:08:45"
+Type:	Analog
+"Description:	Temp RNRG 110S"
+"Serial Number:	"
+Height:	10.00
+Bearing:	0.00
+"Scale Factor:	55.55000"
+Offset:	-86.38000
+Units:	C
+Channel:	17
+"Effective Date:	2017-10-03 21:08:45"
+Type:	Analog
+"Description:	Baro RNRG BP20"
+"Serial Number:	180531625"
+Height:	6.50
+Bearing:	0.00
+"Scale Factor:	217.90000"
+Offset:	105.90000
+Units:	mb
+Data
