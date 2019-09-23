@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[2]:
 
 
 import pandas as pd
@@ -32,11 +32,11 @@ from itertools import *
 
 import plotly.offline as pyo
 import plotly_express as px
-
+import plotly.graph_objs as go
 import glob
 
 
-# In[5]:
+# In[1]:
 
 
 def fault_detection(df, sensor='anem', correlation_window = 10, ratio_th = 10, correlation_th = .7, diff_th = .1):
@@ -46,7 +46,7 @@ def fault_detection(df, sensor='anem', correlation_window = 10, ratio_th = 10, c
         sensor: 'anem' anemometer, 'vane' windvane
         func: 'correlation', 'ratio', 'diff', 'all'
         correlation_window: default=10. Ventana de correlación
-        
+
         return: Dataframe con las stats nuevas
     """
     if sensor.lower() == 'anem':
@@ -82,8 +82,16 @@ def fault_detection(df, sensor='anem', correlation_window = 10, ratio_th = 10, c
         # Rolling correlations           
         if ('correlation' in func) or ('all' in func):
             correlation_col_name = str(x[0] + 'VS' + x[1] + '_correlation*')
-            rolling_correlation = df_sensors[x[0]].rolling(correlation_window).corr(df_sensors[x[1]].rolling(correlation_window))
-            df_sensors[correlation_col_name] = rolling_correlation.values
+            
+            #rolling_correlation = df_sensors[x[0]].rolling(correlation_window).corr(df_sensors[x[1]].rolling(correlation_window)).shift(2)
+            rolling_correlation = [np.corrcoef(df_sensors.loc[idx-correlation_window:idx, x[0]].values, df_sensors.loc[idx-correlation_window:idx, x[1]].values)[0][1] for idx, _ in df_sensors.iterrows()]
+            
+            
+            df_sensors[correlation_col_name] = rolling_correlation
+            
+            
+            
+            
             df_sensors[correlation_col_name + '_anomaly'] = ''
             df_sensors.loc[df_sensors[correlation_col_name] <= correlation_th, correlation_col_name + '_anomaly'] = 1
             df_sensors.loc[df_sensors[correlation_col_name] > correlation_th, correlation_col_name + '_anomaly'] = 0
@@ -213,20 +221,34 @@ def plotting_anem_parameter_tunning(df, ratio_range=30, correlation_range=10):
         plt.show()
 
 
-# In[2]:
+# In[5]:
 
 
-def plot_sensors(df, index_start, sensors=[]):
+def plot_sensors(df, index_start, index_finish, sensors=[]):
 
     time_col = df.columns[df.columns.str.contains('Time')]
     
-    df_to_plot = df.loc[index_start - 50:index_start+50, sensors]
-    df_to_plot['step'] = df.loc[index_start - 50:index_start+50, time_col]
+    df_to_plot = df.loc[index_start - 20:index_finish+50, sensors]
+    df_to_plot['step'] = df.loc[index_start - 20:index_finish+50, time_col]
     
-    df_melt = df_to_plot.melt(id_vars='step', value_vars=sensors)
+    #df_melt = df_to_plot.melt(id_vars='step', value_vars=sensors)
     
-    fig = px.line(df_melt, x='step', y='value', color='variable')
+    #fig = px.line(df_melt, x='step', y='value', color='variable', title='Start: '+ str(df_to_plot.loc[index_start, 'step']) +' Ends: '+ str(df_to_plot.loc[index_finish, 'step']))
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(x=df_to_plot['step'], y=df_to_plot[sensors[0]],
+                        mode='lines+markers',
+                        name=str(sensors[0])))
+
+    fig.add_trace(go.Scatter(x=df_to_plot['step'], y=df_to_plot[sensors[1]],
+                        mode='lines+markers',
+                        name=str(sensors[1])))
+
+    fig.layout.update(
+        title=go.layout.Title(
+            text='Start: '+ str(df_to_plot.loc[index_start, 'step']) +' Ends: '+ str(df_to_plot.loc[index_finish, 'step']),
+    ))
     
+    #fig.show(=)    
     return fig
 
 
@@ -287,12 +309,13 @@ def generate_dashboard(df, redundance_dict={}):
             os.makedirs(f'anomaly_html/{dir_name}/{key}')
         except:
             print("Already exists...")
+            
         for value in values:
-            fig = plot_sensors(df, value[0], sensors=[key, redundance_dict[key]])
+            fig = plot_sensors(df, value[0], value[-1], sensors=[key, redundance_dict[key]])
             fig.write_html(f'anomaly_html/{dir_name}/{key}/{key}-{value[0]}.html', full_html=False)   
     
         cont = 0
-        for file in tqdm(glob.glob(f"anomaly_html/{dir_name}/{key}/*.html")):
+        for file in tqdm(sorted(glob.glob(f"anomaly_html/{dir_name}/{key}/*.html"), key=os.path.getmtime)):
             html += '<div><h3> Anomalia: '+ str(cont+1) +' en el sensor: '+ key +'</h3></div>'
             cont +=1
             f = open(file, 'r', encoding='utf-8')
@@ -306,19 +329,101 @@ def generate_dashboard(df, redundance_dict={}):
         Html_file.close()
 
 
-# In[24]:
+# In[ ]:
 
 
-#html = '<html><body>' #add anything else in here or even better 
-                      #use a template that you read and complement
-#lastDate = None
-#for r in htmlfiles:
-#    print(r)
-    #if not lastDate or not lastDate == r[1]:
-        #html += '<h3>%s</h3>' % (str(r[1]))
-    #html += '<a href="%s">Your Report Title</a>' % (r[0])
+def anem_parameter_tunning(df, ch_anem, ratio_range=30, correlation_range=10):
+    
+    df_to_tunning = df[df.columns[df.columns.str.contains('Anem')]].copy()
+    
+    
+    
+    idx = 0
+    
+    for ratio in tqdm(range(2, ratio_range)):
+        for correlation in range(1, correlation_range):
+            correlation = round(correlation *.1, 2)
+            
+            df_fault_detection = fault_detection(df_to_tunning, sensor='anem', correlation_window=10, ratio_th=ratio, correlation_th=correlation)
+            
+            df_anem_filtered = anemometer_identification(df_vaquerias_fault_detection)
+            
+            indexes = get_index_list(df_anem_filtered, ch_anem)
+            
+            anem_dict = {}
+            #anem_dict[ch_anem] = split_kneighbor_indexes(indexes, 12)
+            print(len(split_kneighbor_indexes(indexes, 12)))           
 
-#return html #or even better, write it to the disk.
+
+# In[ ]:
+
+
+def anem_parameter_tunning(df, ratio_range=30, correlation_range=10):
+    
+    df_to_plot = df[df.columns[df.columns.str.contains('Anem')]]
+    
+    df_intersection = pd.DataFrame()
+    df_ratio = pd.DataFrame()
+    df_correlation = pd.DataFrame()
+    
+    
+    idx = 0
+    for ratio in tqdm(range(2, ratio_range)):
+        for correlation in range(0, correlation_range):
+            correlation = round(correlation *.1, 2)
+            df_to_plot_stats = fault_detection(df_to_plot, sensor='anem', correlation_window=10, ratio_th = ratio, correlation_th = correlation)
+        
+            ratio_cols = df_to_plot_stats.columns[df_to_plot_stats.columns.str.contains('_ratio\*_anomaly')]
+            correlation_cols = df_to_plot_stats.columns[df_to_plot_stats.columns.str.contains('_correlation\*_anomaly')]
+            
+            
+            count_intersection = []
+            for x in range(len(ratio_cols)):
+                count_intersection.append(len(df_to_plot_stats.loc[(df_to_plot_stats[ratio_cols[x]] == 1) & 
+                                                                   (df_to_plot_stats[correlation_cols[x]] == 1), :]))
+    
+            count_intersection = sum(count_intersection)         
+            df_intersection.loc[idx, 'cant'] = count_intersection
+            df_intersection.loc[idx, 'ratio'] = ratio
+            df_intersection.loc[idx, 'correlation'] = correlation
+            df_intersection.name = 'Intersection'
+        
+            count_ratio = []
+            count_ratio.append([len(df_to_plot_stats.loc[df_to_plot_stats[col] == 1, col]) for col in ratio_cols])
+            count_ratio = sum(*count_ratio)
+            df_ratio.loc[idx, 'cant'] = count_ratio
+            df_ratio.loc[idx, 'ratio'] = ratio
+            df_ratio.loc[idx, 'correlation'] = correlation
+            df_ratio.name = 'Ratio'
+            
+            count_correlation = []
+            count_correlation.append([len(df_to_plot_stats.loc[df_to_plot_stats[col] == 1, col]) for col in correlation_cols])
+            count_correlation = sum(*count_correlation)
+            df_correlation.loc[idx, 'cant'] = count_correlation
+            df_correlation.loc[idx, 'ratio'] = ratio
+            df_correlation.loc[idx, 'correlation'] = correlation
+            df_correlation.name = 'Correlation'
+            
+            idx = idx+1
+            
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
+
+
+
 
 
 # In[ ]:
