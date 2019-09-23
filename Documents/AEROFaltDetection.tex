@@ -5,25 +5,39 @@
 %\usepackage[spanish]{babel}
 \begin{document}
 
-\title{Fault detection methods for tower sensors}
+\title{Weather sensor fault detection in Meteorological masts}
 
-\author{Franco Piergallini Guida, Filippo Visco-Comandini}% <-this % stops a space
-
-
-
-% make the title area
+\author{Franco Piergallini Guida, Filippo Visco-Comandini}
 \maketitle
 
 \begin{abstract}
-The abstract goes here.
+Wind power has become the world?s fastest growing renewable technology. The world-wide wind power installed capacity has exceeded XXX GW , and the new installation in 2019 alone was more than XX GW. A major issue with wind power system and with meteorological masts is the relatively high cost of operation and maintenance (OM). Wind turbines and sensor towers are hard-to-access structures, and they are often located in remote areas. That?s why continuous monitoring of wind turbine health using automated failure detection algorithms can improve turbine reliability and reduce maintenance costs by detecting failures before they reach a catastrophic stage and by eliminating unnecessary scheduled maintenance.
+Most of the wind turbines and meteorological masts have supervisory control and data acquisition (SCADA) system and it rapidly became the standard. SCADA has been used in other industries for accurate and timely detection, diagnostics and prognostics of failures and performance problems.
+In the present work, mathematical methods are proposed for sensor fault detection for meteorological masts through the analysis of the SCADA data. The idea is to compare and analyze measurements coming from the various sensors located in the same tower and different heights. We used a number of measurements to develop anomaly detection algorithms and investigated classification techniques using manual check and model parameter tuning. 
+These methods are tested on wind masts situated in Argentina.
 \end{abstract}
-\section{Introducion}
-asdadasd
+\section{Introduction}
+Renewable energy source is playing an important role in the global energy mix, as a mean of reducing the impact of energy production on climate change and wind power has become the fastest growing renewable technology. 
+Wind turbines (WTs) are unmanned, remote power plants. Unlike conventional power stations, WTs are exposed to highly variable and harsh weather conditions, including calm to severe winds, tropical heat, lightning, arctic cold, hail, and snow. Due to these external variations, WTs undergo constantly changing loads, which result in highly variable operational conditions that lead to intense mechanical stress \cite{ribrant2006thesis}.
+
+Supervisory control and data acquisition (SCADA) is an application that collects data from a system and sends them to a central computer for monitoring and controlling. Current controlling monitor (CM) systems essentially provide the necessary sensor and capability of data capture required for monitoring.
+
+The research for  fault detections and diagnostic techniques has been widely studying using various methods \cite{tchakoua2014wind,wymore2015survey}. 
+Clustering algorithms and principal components analysis \cite{kim2011use}, AI based framework \cite{wang2014scada}, performance evaluation and wake analysis \cite{astolfi2016mathematical}.
+
+Meteorological masts  
+but the literature about the fault diagnostic technique is quite limited \cite{hasu2006weather}  .
 
 
-\section{Notas bibliografica}
-dasadadasda
-\cite{wang2014scada}
+The goal of this paper is to
+
+
+This paper is organized as following. In
+
+
+\subsection{Notas bibliografica}
+
+
 
 \cite{kusiak2011prediction}
 
@@ -35,13 +49,29 @@ dasadadasda
 
 \cite{yang2014wind}
 
-\cite{tchakoua2014wind}
 
 
-\cite{wymore2015survey}
+
+\section{Sensor tower diagnostics with scada data}
+In contrast to control engineering applications, the weather sensor fault detection has a few special features. Namely, the phenomenon itself, weather, can be non-linear and time-varying. The local fault detection model for the weather measurement can change drastically and disturbances can be very large.
+
+\section{scada data}\label{sec:scadaData}
+\section{Failure in the sensor towers}\label{sec:failures}
+In this section, we are going to describe different existing types of failures in sensor towers. We can classify them in three group
+\subsection{Mechanical faults} Mechanicals faults are identify by a mechanical failure in the sensor. For example in the \emph{XXX veleta}, 
+in the anemometers .there is a large variety of mechanical faults
+\subsection{Connection  faults} Intermittant faults
+\subsection{Calibration faults} Faults that changes the measurement all along the scales
 
 
-\cite{kim2011use}
+\section{Algorithms}
+\subsection{Ratio}
+\subsection{Pearson correlations}
+\section{Results and discussion}
+XXXXX
+\section{Conclusion}
+XXXXX
+
 \bibliographystyle{IEEEtran}
 \bibliography{BibliografiaAERO.bib}
 
