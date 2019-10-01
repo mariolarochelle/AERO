@@ -23,23 +23,22 @@ Wind energy is fundamentally used to produce electric energy. Wind turbines (WTs
 Supervisory control and data acquisition (SCADA) is an application that collects data from a system and sends them to a central computer for monitoring and controlling. Current controlling monitor (CM) systems essentially provide the necessary sensor and capability of data capture required for monitoring.
 
 The research for  fault detections and diagnostic techniques has been widely studying using various methods \cite{tchakoua2014wind,wymore2015survey}. 
-Clustering algorithms and principal components analysis \cite{kim2011use}, AI based framework \cite{wang2014scada}, performance evaluation and wake analysis \cite{astolfi2016mathematical}.
+Clustering algorithms and principal components analysis \cite{kim2011use}, AI based framework \cite{wang2014scada}, performance evaluation and wake analysis \cite{astolfi2016mathematical}, various machine learning algormiths used in fault prediction for SCADA data \cite{kusiak2011prediction}.
 
 Meteorological masts  
 but the literature about the fault diagnostic technique is quite limited \cite{hasu2006weather} .
 
 
-The goal of this paper is to
+This paper proposes a methodology for fault diagnosis in sensor tower using a data-driven approach. The fault- related data is analyzed with two different algorithms
 
-
-This paper is organized as following. In
+This paper is organized as following. In Section \ref{sec:sensortower} we describe the sensor tower components and the scada data, in Section \ref{sec:failures} we show what kind of failures we might encounter in the sensor towers, fault detection algorithms are presented in Section \ref{sec:algorithms}. Results and discussion are in section \ref{sec:results}. We conclude the paper in Section \ref{sec:conclusion}
 
 
 \subsection{Notas bibliografica}
 
 
 
-\cite{kusiak2011prediction}
+
 
 \cite{lu2009review}
 
@@ -52,11 +51,14 @@ This paper is organized as following. In
 
 
 
-\section{Sensor tower diagnostics with scada data}
+\section{Sensor tower}\label{sec:sensortower}
+\subsection{Components}
+\subsection{scada data}\label{subsec:scadaData}
+
+\section{Failure in the sensor towers}\label{sec:failures}
 In contrast to control engineering applications, the weather sensor fault detection has a few special features. Namely, the phenomenon itself, weather, can be non-linear and time-varying. The local fault detection model for the weather measurement can change drastically and disturbances can be very large.
 
-\section{scada data}\label{sec:scadaData}
-\section{Failure in the sensor towers}\label{sec:failures}
+
 In this section, we are going to describe different existing types of failures in sensor towers. We can classify them in three group
 \subsection{Mechanical faults} Mechanicals faults are identify by a mechanical failure in the sensor. For example in the \emph{XXX veleta}, 
 in the anemometers .there is a large variety of mechanical faults
@@ -64,13 +66,13 @@ in the anemometers .there is a large variety of mechanical faults
 \subsection{Calibration faults} Faults that changes the measurement all along the scales
 
 
-\section{Algorithms}
+\section{Algorithms}\label{sec:algorithms}
 \subsection{Ratio}
 \subsection{Pearson correlations}
-\section{Results and discussion}
+\section{Results and discussion}\label{sec:results}
 XXXXX
-\section{Conclusion}
-XXXXX
+\section{Conclusion}\label{sec:conclusion}
+A methodology to predict  faults using information provided by SCADA systems and fault files was presented.
 
 \bibliographystyle{IEEEtran}
 \bibliography{BibliografiaAERO.bib}
