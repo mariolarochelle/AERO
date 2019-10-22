@@ -68,7 +68,22 @@ in the anemometers .there is a large variety of mechanical faults
 
 \section{Algorithms}\label{sec:algorithms}
 \subsection{Ratio}
+We group the same type of sensors and calculates the ratio between them, if it is greater than a threshold it is classified as anomalous.
+\[ R_{i}^{j,k} = \frac{m_{i}^{j}}{m_{i}^{k}}, k \neq j \]
+
 \subsection{Pearson correlations}
+For each sensor's measurements, a moving Pearson correlation is calculated with a parameterized window valor, if a specific value is greater than a threshold it counts as an anomaly, a normal behavior dictates that all sensors must follow a same trend. This metric is mainly used for detects anomalies on anemometers types sensors. 
+\[C_{i}^{j,k} = \rho(\frac{V_{i - w}^{j}}{V_{i - w}^{k}})  \]
+
+\subsection{Logic combinations}
+If a specific sensor value have multiples discrepancies both in correlation or ratio with other sensors of the same type, then we classify that value as an anomalous measurement.
+
+\subsection{Parameter tuning}
+With this process, we obtained the bests thresholds for the Pearson correlation and the ratio. We performed the algorithm for several ranges of values of the parameters and contrast it with the real faults on data sets, to obtain the best combination that has the best sensibility for detect real faults. The parameters that we can adjust are the quotient on the ratio, correlation result and correlation window, this windows are the number of previous measurements that we will take to do this operation.
+ 
+
+
+
 \section{Results and discussion}\label{sec:results}
 XXXXX
 \section{Conclusion}\label{sec:conclusion}
