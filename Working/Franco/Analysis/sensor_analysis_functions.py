@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
+# In[1]:
 
 
 import pandas as pd
@@ -67,7 +67,7 @@ def fault_detection(df, sensor='anem', correlation_window = 10, ratio_th = 10, c
             df_sensors[str(col) + '-cos*'] = np.sin(np.deg2rad(df_sensors[col])) 
     
     
-    for x in itertools.combinations(df_sensors.columns[~df_sensors.columns.str.contains('Timestamp')], 2):
+    for x in tqdm(list(itertools.combinations(df_sensors.columns[~df_sensors.columns.str.contains('Timestamp')], 2))):
         
         # Fractions
         if ('ratio' in func) or ('all' in func):
@@ -85,16 +85,13 @@ def fault_detection(df, sensor='anem', correlation_window = 10, ratio_th = 10, c
             
             #rolling_correlation = df_sensors[x[0]].rolling(correlation_window).corr(df_sensors[x[1]].rolling(correlation_window)).shift(2)
             rolling_correlation = [np.corrcoef(df_sensors.loc[idx-correlation_window:idx, x[0]].values, df_sensors.loc[idx-correlation_window:idx, x[1]].values)[0][1] for idx, _ in df_sensors.iterrows()]
-            
-            
             df_sensors[correlation_col_name] = rolling_correlation
-            
-            
-            
-            
             df_sensors[correlation_col_name + '_anomaly'] = ''
             df_sensors.loc[df_sensors[correlation_col_name] <= correlation_th, correlation_col_name + '_anomaly'] = 1
             df_sensors.loc[df_sensors[correlation_col_name] > correlation_th, correlation_col_name + '_anomaly'] = 0
+            
+            
+            
             
 
         # Difference
@@ -110,10 +107,10 @@ def fault_detection(df, sensor='anem', correlation_window = 10, ratio_th = 10, c
     return df_sensors
 
 
-# In[2]:
+# In[7]:
 
 
-def anemometer_identification(df_stats, ratio_th = 10, correlation_th = .7, window = 10):
+def anemometer_identification(df_stats, redundant_sensors, ratio_th = 10, correlation_th = .7, window = 10):
     
     df_to_return = df_stats.copy()
     df_stast = df_stats.copy()
@@ -136,8 +133,20 @@ def anemometer_identification(df_stats, ratio_th = 10, correlation_th = .7, wind
         for col in ch_anem_columns:
             if df_to_return.loc[idx, col] > 70:
                 ch_anem_to_join.append(col)
+        
+        def_keys = []
+        for k in keys:
+            try:
+                if (df_to_return.loc[idx, k+'VS'+redundant_sensors[k]+'_correlation*_anomaly'] == 1 |
+                    df_to_return.loc[idx, k+'VS'+redundant_sensors[k]+'_ratio*_anomaly'] == 1):
+                    def_keys.append(k)
+            except:
+                pass
+            
+        df_to_return.loc[idx, 'broken?'] = ','.join(np.unique(def_keys+ch_anem_to_join))    
 
-        df_to_return.loc[idx, 'broken?'] = ','.join(np.unique(keys+ch_anem_to_join))    
+
+    
     
     df_to_return.loc[df_to_return['broken?'] == '', 'broken?'] = 'None'
     df_to_return.fillna('None', inplace=True)
@@ -225,15 +234,11 @@ def plotting_anem_parameter_tunning(df, ratio_range=30, correlation_range=10):
 
 
 def plot_sensors(df, index_start, index_finish, sensors=[]):
-
+    
     time_col = df.columns[df.columns.str.contains('Time')]
     
     df_to_plot = df.loc[index_start - 20:index_finish+50, sensors]
     df_to_plot['step'] = df.loc[index_start - 20:index_finish+50, time_col]
-    
-    #df_melt = df_to_plot.melt(id_vars='step', value_vars=sensors)
-    
-    #fig = px.line(df_melt, x='step', y='value', color='variable', title='Start: '+ str(df_to_plot.loc[index_start, 'step']) +' Ends: '+ str(df_to_plot.loc[index_finish, 'step']))
     fig = go.Figure()
     fig.add_trace(go.Scatter(x=df_to_plot['step'], y=df_to_plot[sensors[0]],
                         mode='lines+markers',
@@ -313,15 +318,14 @@ def generate_dashboard(df, redundance_dict={}):
         for value in values:
             fig = plot_sensors(df, value[0], value[-1], sensors=[key, redundance_dict[key]])
             fig.write_html(f'anomaly_html/{dir_name}/{key}/{key}-{value[0]}.html', full_html=False)   
-    
+            
         cont = 0
         for file in tqdm(sorted(glob.glob(f"anomaly_html/{dir_name}/{key}/*.html"), key=os.path.getmtime)):
             html += '<div><h3> Anomalia: '+ str(cont+1) +' en el sensor: '+ key +'</h3></div>'
-            cont +=1
             f = open(file, 'r', encoding='utf-8')
             f = f.read()
             html += str(f)
-
+            cont +=1
         html += '</body></html>'
 
         Html_file = open(f"{dir_name}/filename_{key}.html","w")
