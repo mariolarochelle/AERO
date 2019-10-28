@@ -53,38 +53,79 @@ This paper is organized as following. In Section \ref{sec:sensortower} we descri
 
 \section{Sensor tower}\label{sec:sensortower}
 \subsection{Components}
+\subsubsection{Data Logger}
+The data logger is the central computer instrument that records measurements from several sensors at a sampling rate over time.
+\subsubsection{Anemometers}
+An anemometer is a device for measuring wind speed. It's consisted of three hemispherical coups mounted on one end of three horizontal arms, which in turn were mounted at forty five degrees to each other on a vertical shaft. The air flow push the coups in any horizontal direction turned the cups in a manner that was proportional to the wind speed. They have several parameters to configure, offset, scale factor, and units measured. Accordingly to the data logger sampling rate the anemometer send measurements for the minimum, maximum, average and standard deviation of the wind speed at that particularly time. Usually, a sensor tower has from five to six anemometers placed on different heights.  
+\subsubsection{Wind vane}
+la medida es en grado
 \subsection{scada data}\label{subsec:scadaData}
+Scada data are the data coming from the data logger.  Aca we define $m_t^i$ 
+-serie temporale con cierta frequencia
+- min, max , std and avg
+
 
 \section{Failure in the sensor towers}\label{sec:failures}
 In contrast to control engineering applications, the weather sensor fault detection has a few special features. Namely, the phenomenon itself, weather, can be non-linear and time-varying. The local fault detection model for the weather measurement can change drastically and disturbances can be very large.
 
+por esa seccion necesitamos images del data logger.
+
 
 In this section, we are going to describe different existing types of failures in sensor towers. We can classify them in three group
-\subsection{Mechanical faults} Mechanicals faults are identify by a mechanical failure in the sensor. For example in the \emph{XXX veleta}, 
-in the anemometers .there is a large variety of mechanical faults
-\subsection{Connection  faults} Intermittant faults
-\subsection{Calibration faults} Faults that changes the measurement all along the scales
+\subsection{Mechanical faults} Mechanicals faults are identified by a mechanical failure in the sensor. In the wind vane, the mechanical failure corresponds to dislocated rotito. This failure is reflected in the wind measurements only when the wind is going above or below a certain thresholds.
+in the anemometers .there is a large variety of mechanical faults.  
+\subsection{Connection  faults} Faulty connections between sensors, wires and data logger are reflected in measurements as intermittent values. 
+\subsection{Calibration faults} 
+Faults that changes the measurement all along the scales.
 
 
 \section{Algorithms}\label{sec:algorithms}
-\subsection{Ratio}
-We group the same type of sensors and calculates the ratio between them, if it is greater than a threshold it is classified as anomalous.
-\[ R_{i}^{j,k} = \frac{m_{i}^{j}}{m_{i}^{k}}, k \neq j \]
+In this section, we describe the algorithms used in the process to detect anomalies during the measurement process.  
+\subsection{Computed variables}
+\subsubsection{Ratio}
+For the ratio, we have two types of measurements. In the data logger, wind vanes measures are expressed in degree and the anemometers units are m/s.  $m_t^{i}$ represents the measurement at time $t$ on the $i$-th sensor.
+For each sensor type, we compute the ratio among all sensors as 
+\begin{equation} 
+R_{t}^{j,i} = \frac{m_{t}^{j}}{m_{t}^{i}},\qquad i \neq j 
+\end{equation}
 
-\subsection{Pearson correlations}
-For each sensor's measurements, a moving Pearson correlation is calculated with a parameterized window valor, if a specific value is greater than a threshold it counts as an anomaly, a normal behavior dictates that all sensors must follow a same trend. This metric is mainly used for detects anomalies on anemometers types sensors. 
-\[C_{i}^{j,k} = \rho(\frac{V_{i - w}^{j}}{V_{i - w}^{k}})  \]
 
-\subsection{Logic combinations}
-If a specific sensor value have multiples discrepancies both in correlation or ratio with other sensors of the same type, then we classify that value as an anomalous measurement.
+\subsubsection{Pearson correlations}
+We compute the Pearson correlations only for anemometers. For the $i$-th sensor and for each time $t$, we define the measurement vector with a time window $w$ as 
+\begin{equation}
+M^i_{t,w} = [m_{t-w}^i,m_{t-w+1}^i,\ldots,m_t^i]
+\end{equation}
+We compute the moving Pearson correlation depending on the time window $w$ between the $i$-th and the $j$-th sensors
+\begin{equation}
+C^{i,j}_{t,w}= \rho\left( \frac{M^i_{t,w}}{M^j_{t,w}}\right)
+\end{equation}
 
-\subsection{Parameter tuning}
-With this process, we obtained the bests thresholds for the Pearson correlation and the ratio. We performed the algorithm for several ranges of values of the parameters and contrast it with the real faults on data sets, to obtain the best combination that has the best sensibility for detect real faults. The parameters that we can adjust are the quotient on the ratio, correlation result and correlation window, this windows are the number of previous measurements that we will take to do this operation.
- 
+\subsection{Flagging} 
+Aca se introduce los parametros, son los dos thresholds para el ratio y la correlacion, el time windowns and un threshold maxima medida para los anenometro
+
+
+With this process, we obtained the bests thresholds for the Pearson correlation and the ratio. We performed the algorithm for several ranges of values of the parameters and contrast it with the real faults on data sets, to obtain the combination that has the best sensibility for detect real faults. The parameters that we can adjust are the quotient on the ratio, correlation result and correlation window, this windows are the number of previous measurements that we will take to do this operation.
+
+\subsection{Fault detection}%Logic combination
+In order to detect and identify faults in measurements, we require that two computed variables accomplish the following criteria
+
+If a specific sensor value have multiples discrepancies both in correlation or ratio with other sensors of the same type, then we classify that value as an anomalous measurement, if and only if it also has a discrepancy with a redundant sensor, in type and height, or in cases where there is no redundant sensor, the closest one.
+
+
+This metric is mainly used for detects anomalies values on anemometers types sensors. 
+
+if a specific value is greater than a threshold it counts as a possible anomalous value and is marked with a flag, a normal behavior dictates that all sensors must follow a same trend. 
+
+
 
 
 
 \section{Results and discussion}\label{sec:results}
+Parameter tuning.
+
+algunos resultados de detections
+
+
 XXXXX
 \section{Conclusion}\label{sec:conclusion}
 A methodology to predict  faults using information provided by SCADA systems and fault files was presented.
