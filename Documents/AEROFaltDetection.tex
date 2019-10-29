@@ -22,23 +22,18 @@ Wind energy is fundamentally used to produce electric energy. Wind turbines (WTs
 
 Supervisory control and data acquisition (SCADA) is an application that collects data from a system and sends them to a central computer for monitoring and controlling. Current controlling monitor (CM) systems essentially provide the necessary sensor and capability of data capture required for monitoring.
 
-The research for  fault detections and diagnostic techniques for wind turbines has been widely studying using various methods \cite{tchakoua2014wind,wymore2015survey}. 
-Clustering algorithms and principal components analysis \cite{kim2011use}, AI based framework \cite{wang2014scada}, performance evaluation and wake analysis \cite{astolfi2016mathematical}, various machine learning algormiths used in fault prediction for SCADA data \cite{kusiak2011prediction}.
+The research for  fault detection and diagnostic techniques for wind turbines has been widely studying  \cite{tchakoua2014wind,wymore2015survey}. Some of the techniques involves
+clustering algorithms and principal components analysis \cite{kim2011use}, artificial intelligence based framework \cite{wang2014scada}, performance evaluation and wake analysis \cite{astolfi2016mathematical} and various machine learning algorithms  \cite{kusiak2011prediction}.
 
-Meteorological masts  
-but the literature about the fault diagnostic technique is quite limited \cite{hasu2006weather} .
+Our research focus the fault diagnosis on meteorological masts,   
+but the literature about these techniques is quite limited \cite{hasu2006weather} .
 
-
-This paper proposes a methodology for fault diagnosis in sensor tower using a data-driven approach. The fault- related data is analyzed with two different algorithms
+This paper proposes a methodology for fault diagnosis in sensor tower using a data-driven approach through the analysis of the SCADA data of two components. The anemometers and wind vanes measurements are analyzed with two different algorithms in order to develop anomaly detection techniques using manual check and model parameter tuning. 
 
 This paper is organized as following. In Section \ref{sec:sensortower} we describe the sensor tower components and the scada data, in Section \ref{sec:failures} we show what kind of failures we might encounter in the sensor towers, fault detection algorithms are presented in Section \ref{sec:algorithms}. Results and discussion are in section \ref{sec:results}. We conclude the paper in Section \ref{sec:conclusion}
 
 
 \subsection{Notas bibliografica}
-
-
-
-
 
 \cite{lu2009review}
 
@@ -52,43 +47,41 @@ This paper is organized as following. In Section \ref{sec:sensortower} we descri
 
 
 \section{Sensor tower}\label{sec:sensortower}
+In this section we explain two components of the sensor tower called anemometers and wind vanes.  We also describe how SCADA data works.
 \subsection{Components}
-\subsubsection{Data Logger}
-The data logger is the central computer instrument that records measurements from several sensors at a sampling rate over time.
 \subsubsection{Anemometers}
-An anemometer is a device for measuring wind speed. It's consisted of three hemispherical coups mounted on one end of three horizontal arms, which in turn were mounted at forty five degrees to each other on a vertical shaft. The air flow push the coups in any horizontal direction turned the cups in a manner that was proportional to the wind speed. They have several parameters to configure, offset, scale factor, and units measured. Accordingly to the data logger sampling rate the anemometer send measurements for the minimum, maximum, average and standard deviation of the wind speed at that particularly time. Usually, a sensor tower has from five to six anemometers placed on different heights.  
+An anemometer is a device for measuring wind speed. It consists in three horizontal arms where at each end an hemispherical cup is mounted. The air flow pushes the cups in any horizontal direction. Anemometers configuration involves offset, scale, boom orientation, units, and sensor height. Usually, a sensor tower has on average six anemometers placed on different heights, and often anemometers are paired at each heights to have redundant measures.\cite{}
 \subsubsection{Wind vane}
-la medida es en grado
+A wind vane is an instrument used for showing the winds direction. When mounted on an elevated shaft or spire, the vane rotates under the influence of the wind such that its center of pressure rotates to leeward and the vane points into the wind.Wind direction is measured in degrees from true north.\cite{sayigh2012comprehensive}
+
 \subsection{scada data}\label{subsec:scadaData}
-Scada data are the data coming from the data logger.  Aca we define $m_t^i$ 
--serie temporale con cierta frequencia
-- min, max , std and avg
+SCADA is the technology that enables a user to collect data from one or more distant facilities and to send limited control instructions to those. SCADA makes it unnecessary for an operator to be assigned to stay at or frequently visit remote locations when those remote facilities are operating normally \cite{}.
+Scada are the data coming from the data logger, the central computer instrument that records measurements from several sensors (anemometers and wind vanes among them) at a sampling rate over time.\\
+SCADA data are time series measurements with a specific sampling rate. In our case the sampling rate is set to be 10 minutes.
+For both wind directions and wind speed, we define $m_t^i$ as the time series at time $t$ and on $i$-th position. For each time $t$, we have the minimum, the maximun value, the standard deviation and the average of the measures occurred in the $t$-th 10 minutes time slot.
 
 
 \section{Failure in the sensor towers}\label{sec:failures}
-In contrast to control engineering applications, the weather sensor fault detection has a few special features. Namely, the phenomenon itself, weather, can be non-linear and time-varying. The local fault detection model for the weather measurement can change drastically and disturbances can be very large.
-
-por esa seccion necesitamos images del data logger.
-
-
-In this section, we are going to describe different existing types of failures in sensor towers. We can classify them in three group
-\subsection{Mechanical faults} Mechanicals faults are identified by a mechanical failure in the sensor. In the wind vane, the mechanical failure corresponds to dislocated rotito. This failure is reflected in the wind measurements only when the wind is going above or below a certain thresholds.
-in the anemometers .there is a large variety of mechanical faults.  
-\subsection{Connection  faults} Faulty connections between sensors, wires and data logger are reflected in measurements as intermittent values. 
+In this section, we are going to describe different existing types of failures in sensor towers. In contrast to control engineering applications, the weather sensor fault detection has a few special features. Namely, the phenomenon itself, weather, can be non-linear and time-varying. The local fault detection model for the weather measurement can change drastically and disturbances can be very large. We will classify these failures in three categories, each one with its own characteristic.
+\subsection{Mechanical faults} Mechanicals faults are identified by a mechanical failure in the sensor. In the wind vane, the mechanical failure corresponds to dislocated rotito. This failure is reflected in the wind measurements only when the wind is going above or below a certain thresholds.\\
+In the anemometers,.there is a large variety of mechanical faults and they are detectable in the scada data (Figure 1) and they appear in certain specific wind conditions, for example when the wind speed is very slow. \\
+In the wind vane, mechanical faults provoke a blockage of the wind vane and the results is a unrealistic fixed wind direction over a long period of time.
+\subsection{Connection  faults}Connection faults are due to a faulty connector between sensors, wires and the data logger. These faulty connectors make the measurements unstable in the sense that they are blocking the connections between sensors and the data logger. The effect of the connection faults can interfere with the SCADA data in two possible way: either the faulty connections happens over a long period and hence they are reflected as intermittent values or it can happen between the sampling rate, making the standard deviation bigger than usual. (Figure 2) 
 \subsection{Calibration faults} 
-Faults that changes the measurement all along the scales.
+Calibration faults are due to bad configuration of the data logger or ... Those faults are easily recognizable in the scata data, since their values have a constant offset compared to healthy sensors. In practice those type of faults change the measurement all along the scales. (Figure 3)
+
 
 
 \section{Algorithms}\label{sec:algorithms}
-In this section, we describe the algorithms used in the process to detect anomalies during the measurement process.  
-\subsection{Computed variables}
+In this section, we describe the algorithms used to detect anomalies during the measurement process. This section is divided in three parts: in subsection \ref{subsec:computedvariables}, we define the computed variables used later in the algorithms. In \ref{subsec:flagging}, we explain the process to flag time series measurements as possible fault, In
+\ref{subsec:faultdetection} we show the logic to determine whether the flags are faults.  
+\subsection{Computed variables}\label{subsec:computedvariables}
 \subsubsection{Ratio}
-For the ratio, we have two types of measurements. In the data logger, wind vanes measures are expressed in degree and the anemometers units are m/s.  $m_t^{i}$ represents the measurement at time $t$ on the $i$-th sensor.
-For each sensor type, we compute the ratio among all sensors as 
+For the ratio, we have two types of measurements. In the data logger, wind vanes measures are expressed in degree and the anemometers units are in m/s.  $m_t^{i}$ represents the measurement at time $t$ on the $i$-th sensor.
+For each sensor type, we compute the ratio among all measurements in the sensors as
 \begin{equation} 
 R_{t}^{j,i} = \frac{m_{t}^{j}}{m_{t}^{i}},\qquad i \neq j 
 \end{equation}
-
 
 \subsubsection{Pearson correlations}
 We compute the Pearson correlations only for anemometers. For the $i$-th sensor and for each time $t$, we define the measurement vector with a time window $w$ as 
@@ -100,28 +93,25 @@ We compute the moving Pearson correlation depending on the time window $w$ betwe
 C^{i,j}_{t,w}= \rho\left( \frac{M^i_{t,w}}{M^j_{t,w}}\right)
 \end{equation}
 
-\subsection{Flagging} 
+\subsection{Flagging}\label{subsec:flagging}
+There are several thresholds that serves to labeling a measurement as a possible anomaly. Whenever a measurement cross an specific threshold of his computed variables, is marked with a flag as a possible anomaly. 
+For the ratio computed variable, there is a threshold for the quotient, if a ratio between two measurements of different sensors at the time $t$ is greater than this, is flagged as a possible anomaly. 
+The Pearson correlation computed variable has two parameters, the first one is a threshold for the result, if this is lesser than the threshold, the measurement is flagged as anomalous. It also has a time window parameter, that determine the historical measurements taken of each sensor to do the Pearson correlation.
+In the anemometers type sensors, there are three thresholds that could labeling a measurement as anomalous, the ratio quotient, Pearson correlation, and a maximum value that could take a measurement, we perform that an anemometer never could take a value greater than 70 m/s, if a measurement is greater than this, it's labeling as anomalous.
+
 Aca se introduce los parametros, son los dos thresholds para el ratio y la correlacion, el time windowns and un threshold maxima medida para los anenometro
 
 
-With this process, we obtained the bests thresholds for the Pearson correlation and the ratio. We performed the algorithm for several ranges of values of the parameters and contrast it with the real faults on data sets, to obtain the combination that has the best sensibility for detect real faults. The parameters that we can adjust are the quotient on the ratio, correlation result and correlation window, this windows are the number of previous measurements that we will take to do this operation.
-
-\subsection{Fault detection}%Logic combination
-In order to detect and identify faults in measurements, we require that two computed variables accomplish the following criteria
-
-If a specific sensor value have multiples discrepancies both in correlation or ratio with other sensors of the same type, then we classify that value as an anomalous measurement, if and only if it also has a discrepancy with a redundant sensor, in type and height, or in cases where there is no redundant sensor, the closest one.
-
-
-This metric is mainly used for detects anomalies values on anemometers types sensors. 
-
-if a specific value is greater than a threshold it counts as a possible anomalous value and is marked with a flag, a normal behavior dictates that all sensors must follow a same trend. 
-
+\subsection{Fault detection}\label{subsec:faultdetection}
+In order to detect and identify faults in measurements, we require that two computed variables accomplish the following criteria: If a specific measurement of a sensor has multiples possible anomalies both in correlation or ratio with other sensors of the same type, then we classify that value as an anomalous measurement, if and only if it also has a discrepancy with a height redundant sensor, or in cases where there is no redundant sensor, the closest one.
 
 
 
 
 \section{Results and discussion}\label{sec:results}
 Parameter tuning.
+With this process, we obtained the bests thresholds for the Pearson correlation and the ratio. We performed the algorithm for several ranges of values of the parameters and contrast it with the real faults on data sets, to obtain the combination that has the best sensibility for detect real faults. The parameters that we can adjust are the quotient on the ratio, correlation result and correlation window, this windows are the number of previous measurements that we will take to do this operation.
+
 
 algunos resultados de detections
 
