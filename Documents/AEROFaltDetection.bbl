@@ -52,16 +52,16 @@ D.~Astolfi, F.~Castellani, and L.~Terzi, ``Mathematical methods for scada data
   mining of onshore wind farms: Performance evaluation and wake analysis,''
   \emph{Wind Engineering}, vol.~40, no.~1, pp. 69--85, 2016.
 
+\bibitem{kusiak2011prediction}
+A.~Kusiak and W.~Li, ``The prediction and diagnosis of wind turbine faults,''
+  \emph{Renewable Energy}, vol.~36, no.~1, pp. 16--23, 2011.
+
 \bibitem{hasu2006weather}
 V.~Hasu, H.~Koivo, and J.~Poutiainen, ``Weather sensor fault detection with
   time-dependent recursive thresholds,'' in \emph{First International
   Conference on Innovative Computing, Information and Control-Volume I
   (ICICIC'06)}, vol.~3.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2006, pp.
   140--144.
-
-\bibitem{kusiak2011prediction}
-A.~Kusiak and W.~Li, ``The prediction and diagnosis of wind turbine faults,''
-  \emph{Renewable Energy}, vol.~36, no.~1, pp. 16--23, 2011.
 
 \bibitem{lu2009review}
 B.~Lu, Y.~Li, X.~Wu, and Z.~Yang, ``A review of recent advances in wind turbine
@@ -83,5 +83,9 @@ M.~Schlechtingen and I.~F. Santos, ``Comparative analysis of neural network and
 W.~Yang, P.~J. Tavner, C.~J. Crabtree, Y.~Feng, and Y.~Qiu, ``Wind turbine
   condition monitoring: technical and commercial challenges,'' \emph{Wind
   Energy}, vol.~17, no.~5, pp. 673--693, 2014.
+
+\bibitem{sayigh2012comprehensive}
+A.~Sayigh, \emph{Comprehensive renewable energy}.\hskip 1em plus 0.5em minus
+  0.4em\relax Elsevier Science \& Technology, 2012.
 
 \end{thebibliography}

@@ -79,9 +79,11 @@ In this section, we describe the algorithms used to detect anomalies during the 
 \subsubsection{Ratio}
 For the ratio, we have two types of measurements. In the data logger, wind vanes measures are expressed in degree and the anemometers units are in m/s.  $m_t^{i}$ represents the measurement at time $t$ on the $i$-th sensor.
 For each sensor type, we compute the ratio among all measurements in the sensors as
-\begin{equation} 
+\begin{equation}
 R_{t}^{j,i} = \frac{m_{t}^{j}}{m_{t}^{i}},\qquad i \neq j 
 \end{equation}
+
+
 
 \subsubsection{Pearson correlations}
 We compute the Pearson correlations only for anemometers. For the $i$-th sensor and for each time $t$, we define the measurement vector with a time window $w$ as 
