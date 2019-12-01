@@ -13,44 +13,44 @@ Database file #1: BibliografiaAERO.bib.bib
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 13 entries,
+You've used 14 entries,
             4087 wiz_defined-function locations,
-            900 strings with 9981 characters,
-and the built_in function-call counts, 10122 in all, are:
-= -- 828
-> -- 245
+            904 strings with 10135 characters,
+and the built_in function-call counts, 10469 in all, are:
+= -- 857
+> -- 249
 < -- 89
-+ -- 132
-- -- 42
-* -- 495
-:= -- 1537
-add.period$ -- 28
-call.type$ -- 13
-change.case$ -- 12
++ -- 134
+- -- 43
+* -- 506
+:= -- 1606
+add.period$ -- 30
+call.type$ -- 14
+change.case$ -- 13
 chr.to.int$ -- 198
-cite$ -- 13
-duplicate$ -- 710
-empty$ -- 780
-format.name$ -- 53
-if$ -- 2342
+cite$ -- 14
+duplicate$ -- 743
+empty$ -- 815
+format.name$ -- 54
+if$ -- 2419
 int.to.chr$ -- 0
-int.to.str$ -- 13
-missing$ -- 128
-newline$ -- 62
-num.names$ -- 13
-pop$ -- 278
+int.to.str$ -- 14
+missing$ -- 133
+newline$ -- 65
+num.names$ -- 14
+pop$ -- 291
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 780
+skip$ -- 809
 stack$ -- 0
-substring$ -- 474
-swap$ -- 599
+substring$ -- 475
+swap$ -- 615
 text.length$ -- 23
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 13
+type$ -- 14
 warning$ -- 0
-while$ -- 49
-width$ -- 15
-write$ -- 150
+while$ -- 50
+width$ -- 16
+write$ -- 158

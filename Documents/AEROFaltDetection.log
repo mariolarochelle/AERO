@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.22)  30 OCT 2019 20:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.22)  30 NOV 2019 21:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -461,40 +461,46 @@ LaTeX Font Info:    ... okay on input line 6.
 
 -- Lines per column: 58 (exact).
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 61.
+(Font)              <7> on input line 47.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 61.
+(Font)              <5> on input line 47.
 [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
 [2] (./AEROFaltDetection.bbl
-Underfull \hbox (badness 3029) in paragraph at lines 30--34
+Underfull \hbox (badness 3029) in paragraph at lines 35--39
 []\OT1/ptm/m/n/8 P. Tchak-oua, R. Wamkeue, M. Ouhrouche, F. Slaoui-Hasnaoui,
  []
 
-) [3] (./AEROFaltDetection.aux) ) 
+) [3
+
+] (./AEROFaltDetection.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
  1790 strings out of 493014
- 27468 string characters out of 6133350
+ 27470 string characters out of 6133350
  96945 words of memory out of 5000000
  5374 multiletter control sequences out of 15000+600000
  35221 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  26i,5n,23p,763b,159s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/
-dvips/base/8r.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></us
-r/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/t
-exlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/201
-6/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on AEROFaltDetection.pdf (3 pages, 121745 bytes).
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
+xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
+16/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/
+texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist
+/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
+pe1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
+mes/utmri8a.pfb>
+Output written on AEROFaltDetection.pdf (3 pages, 121317 bytes).
 PDF statistics:
  59 PDF objects out of 1000 (max. 8388607)
  42 compressed objects within 1 object stream

@@ -21,6 +21,11 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{yang2014wind}
+W.~Yang, P.~J. Tavner, C.~J. Crabtree, Y.~Feng, and Y.~Qiu, ``Wind turbine
+  condition monitoring: technical and commercial challenges,'' \emph{Wind
+  Energy}, vol.~17, no.~5, pp. 673--693, 2014.
+
 \bibitem{ribrant2006thesis}
 J.~Ribrant, ``Reliability performance and maintenance?a survey of failures in
   wind power systems,'' Ph.D. dissertation, School of Electrical Engineeringm,
@@ -36,6 +41,12 @@ P.~Tchakoua, R.~Wamkeue, M.~Ouhrouche, F.~Slaoui-Hasnaoui, T.~Tameghe, and
 M.~L. Wymore, J.~E. Van~Dam, H.~Ceylan, and D.~Qiao, ``A survey of health
   monitoring systems for wind turbines,'' \emph{Renewable and Sustainable
   Energy Reviews}, vol.~52, pp. 976--990, 2015.
+
+\bibitem{lu2009review}
+B.~Lu, Y.~Li, X.~Wu, and Z.~Yang, ``A review of recent advances in wind turbine
+  condition monitoring and fault diagnosis,'' in \emph{2009 IEEE Power
+  Electronics and Machines in Wind Applications}.\hskip 1em plus 0.5em minus
+  0.4em\relax IEEE, 2009, pp. 1--7.
 
 \bibitem{kim2011use}
 K.~Kim, G.~Parthasarathy, O.~Uluyol, W.~Foslien, S.~Sheng, and P.~Fleming,
@@ -56,6 +67,16 @@ D.~Astolfi, F.~Castellani, and L.~Terzi, ``Mathematical methods for scada data
 A.~Kusiak and W.~Li, ``The prediction and diagnosis of wind turbine faults,''
   \emph{Renewable Energy}, vol.~36, no.~1, pp. 16--23, 2011.
 
+\bibitem{schlechtingen2011comparative}
+M.~Schlechtingen and I.~F. Santos, ``Comparative analysis of neural network and
+  regression based condition monitoring approaches for wind turbine fault
+  detection,'' \emph{Mechanical systems and signal processing}, vol.~25, no.~5,
+  pp. 1849--1875, 2011.
+
+\bibitem{schlechtingen2012condition}
+M.~Schlechtingen and I.~Santos, ``Condition monitoring with ordinary wind
+  turbine scada data--a neuro-fuzzy approach,'' in \emph{Offshore 2011}, 2012.
+
 \bibitem{hasu2006weather}
 V.~Hasu, H.~Koivo, and J.~Poutiainen, ``Weather sensor fault detection with
   time-dependent recursive thresholds,'' in \emph{First International
@@ -63,26 +84,10 @@ V.~Hasu, H.~Koivo, and J.~Poutiainen, ``Weather sensor fault detection with
   (ICICIC'06)}, vol.~3.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2006, pp.
   140--144.
 
-\bibitem{lu2009review}
-B.~Lu, Y.~Li, X.~Wu, and Z.~Yang, ``A review of recent advances in wind turbine
-  condition monitoring and fault diagnosis,'' in \emph{2009 IEEE Power
-  Electronics and Machines in Wind Applications}.\hskip 1em plus 0.5em minus
-  0.4em\relax IEEE, 2009, pp. 1--7.
-
-\bibitem{schlechtingen2012condition}
-M.~Schlechtingen and I.~Santos, ``Condition monitoring with ordinary wind
-  turbine scada data--a neuro-fuzzy approach,'' in \emph{Offshore 2011}, 2012.
-
-\bibitem{schlechtingen2011comparative}
-M.~Schlechtingen and I.~F. Santos, ``Comparative analysis of neural network and
-  regression based condition monitoring approaches for wind turbine fault
-  detection,'' \emph{Mechanical systems and signal processing}, vol.~25, no.~5,
-  pp. 1849--1875, 2011.
-
-\bibitem{yang2014wind}
-W.~Yang, P.~J. Tavner, C.~J. Crabtree, Y.~Feng, and Y.~Qiu, ``Wind turbine
-  condition monitoring: technical and commercial challenges,'' \emph{Wind
-  Energy}, vol.~17, no.~5, pp. 673--693, 2014.
+\bibitem{clifton2014135}
+A.~Clifton, ``135-m meteorological masts at the national wind technology
+  center: Instrumentation, data acquisition, and processing.?'' \emph{Report,
+  July}, 2014.
 
 \bibitem{sayigh2012comprehensive}
 A.~Sayigh, \emph{Comprehensive renewable energy}.\hskip 1em plus 0.5em minus
