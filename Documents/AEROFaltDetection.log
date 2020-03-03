@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.22)  30 NOV 2019 21:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.22)  26 FEB 2020 18:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -460,34 +460,56 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
 LaTeX Font Info:    ... okay on input line 6.
 
 -- Lines per column: 58 (exact).
+
+LaTeX Warning: Citation `ahmed2015investigation' on page 1 undefined on input l
+ine 46.
+
+
+LaTeX Warning: Citation `boyer2009scada' on page 1 undefined on input line 47.
+
+
+LaTeX Warning: Citation `daneels1999scada' on page 1 undefined on input line 49
+.
+
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 47.
+(Font)              <7> on input line 51.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 47.
+(Font)              <5> on input line 51.
 [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
+
+LaTeX Warning: Citation `luo2014wind' on page 2 undefined on input line 54.
+
+
+LaTeX Warning: Citation `chandola2009anomaly' on page 2 undefined on input line
+ 57.
+
+
+LaTeX Warning: Reference `(Figure 1)' on page 2 undefined on input line 61.
+
 [2] (./AEROFaltDetection.bbl
-Underfull \hbox (badness 3029) in paragraph at lines 35--39
+Underfull \hbox (badness 3029) in paragraph at lines 15--19
 []\OT1/ptm/m/n/8 P. Tchak-oua, R. Wamkeue, M. Ouhrouche, F. Slaoui-Hasnaoui,
  []
 
-) [3
+) [3] (./AEROFaltDetection.aux)
 
-] (./AEROFaltDetection.aux)
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 1790 strings out of 493014
- 27470 string characters out of 6133350
- 96945 words of memory out of 5000000
- 5374 multiletter control sequences out of 15000+600000
- 35221 words of font info for 64 fonts, out of 8000000 for 9000
+ 1792 strings out of 493014
+ 27488 string characters out of 6133350
+ 95945 words of memory out of 5000000
+ 5375 multiletter control sequences out of 15000+600000
+ 36328 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 26i,5n,23p,763b,159s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 26i,6n,23p,962b,166s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
 xlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
@@ -500,7 +522,7 @@ texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist
 /fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on AEROFaltDetection.pdf (3 pages, 121317 bytes).
+Output written on AEROFaltDetection.pdf (3 pages, 126737 bytes).
 PDF statistics:
  59 PDF objects out of 1000 (max. 8388607)
  42 compressed objects within 1 object stream
