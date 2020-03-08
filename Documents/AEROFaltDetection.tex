@@ -22,6 +22,8 @@ Wind energy is fundamentally used to produce electric energy. Wind turbines (WTs
 
 Supervisory control and data acquisition (SCADA) is an application that collects data from a system and sends them to a central computer for monitoring and controlling. Current controlling monitor (CM) systems essentially provide the necessary sensor and capability of data capture required for monitoring.
 
+In contrast to control engineering applications, the weather sensor fault detection has a few special features. Namely, the phenomenon itself, weather, can be non-linear and time-varying. The local fault detection model for the weather measurement can change drastically and disturbances can be very large. Fault diagnosis systems aims at detecting and locating degradation in the operation of sensors as early as possible. This way, maintenance operations can be performed in due time, and during time periods with low wind speed. Therefore, maintenance costs are reduced as the number of costly corrective maintenance actions decreases. Besides, the loss of production due to maintenance operations is minimized \cite{luo2014wind}.
+
 The research for  fault detection and diagnostic techniques for wind turbines has been widely studying  \cite{tchakoua2014wind,wymore2015survey,lu2009review}. Some of the techniques involves
 clustering algorithms and principal components analysis \cite{kim2011use}, artificial intelligence based framework \cite{wang2014scada}, performance evaluation and wake analysis \cite{astolfi2016mathematical}, machine learning algorithm \cite{kusiak2011prediction,schlechtingen2011comparative} and neuro fuzzy approach \cite{schlechtingen2012condition}.
 
@@ -30,31 +32,28 @@ but the literature about these techniques is quite limited \cite{hasu2006weather
 
 This paper proposes a methodology for fault diagnosis in sensor tower using a data-driven approach through the analysis of the SCADA data of two components. The anemometers and wind vanes measurements are analyzed with two different algorithms in order to develop anomaly detection techniques using manual check and model parameter tuning. 
 
-This paper is organized as following. In Section \ref{sec:sensortower} we describe the sensor tower components and the SCADA data, in Section \ref{sec:failures} we show what kind of failures we might encounter in the sensor towers, fault detection algorithms are presented in Section \ref{sec:algorithms}. Results and discussion are in section \ref{sec:results}. We conclude the paper in Section \ref{sec:conclusion}.
+This paper is organized as following. In section \ref{sec:sensortower}, we describe the SCADA data coming from the two sensor tower components used in the algorithms, in section \ref{sec:failures} we show the different kind of failures that can happen in the sensor towers. In section \ref{sec:algorithms}, fault detection algorithms are presented. Results and discussion are in section \ref{sec:results} and the conclusion can be found in section \ref{sec:conclusion}.
 
-\section{Sensor tower}\label{sec:sensortower}
-In this section we explain two components of the sensor tower called anemometers and wind vanes.  We also describe how SCADA data works.
-The sensor tower will often be a lattice construction consisting of three main beams shored up by smaller beams. The mast is a long slender construction, which gives an almost two-dimensional flow round a cross-section at certain height above the ground. 
+\section{Meteorological mast components}\label{sec:sensortower}
+Meteorological masts are towers made of steel where measuring components are installed. In this section we explain two components of sensor towers called anemometers and wind vanes and we describe how these components records their data throguht the SCADA system.
+The sensor towers, are  lattice constructions consisting in three main beams shored up by smaller beams. The mast is a long slender construction, which gives an almost two-dimensional flow round a cross-section at certain height above the ground. 
 
 \subsection{Components}
+Meteorological masts usually have several measuring components, such as barometers, temperature sensors, but we focus in two of them.
 \subsubsection{Anemometers}
-An anemometer is a device for measuring wind speed. It consists in three horizontal arms where at each end an hemispherical cup is mounted. The air flow pushes the cups in any horizontal direction. Anemometers configuration involves offset, scale, boom orientation, units, and sensor height. Usually, a sensor tower has on average six anemometers placed on different heights, and often anemometers are paired at each heights to have redundant measures.\cite{clifton2014135}
+An anemometer is a device for measuring wind speed. It consists in three horizontal arms where at each end an hemispherical cup is mounted. The air flow pushes the cups in any horizontal direction. Anemometers configuration involves offset, scale, boom orientation, units, and sensor height. Usually a sensor tower has on average six anemometers placed on different heights, and  anemometers are paired at each heights to have redundant measures \cite{clifton2014135}.
 \subsubsection{Wind vane}
-A wind vane is an instrument used for showing the winds direction. When mounted on an elevated shaft or spire, the vane rotates under the influence of the wind and the vane points into the wind. Wind direction is measured in degrees from true north.\cite{sayigh2012comprehensive}
-
+A wind vane is an instrument used for measure the winds direction. When mounted on an elevated shaft or spire, the vane rotates under the influence of the wind and the vane points into the wind. Wind direction is measured in degrees from true north \cite{sayigh2012comprehensive}.
 \subsection{scada data}\label{subsec:scadaData}
-SCADA systems are widely used for monitoring and control of Industrial Control System (ICS), including the emerging energy system, transportation systems, gas and water systems, and so on. The primary objective of a SCADA system is to control real-life physical equipment and devices, e.g., an energy system SCADA may be used for monitoring and controlling of the electrical plants \cite{ahmed2015investigation}. SCADA collects data from one or more distant facilities dispersed across a large geographic area.% and sends limited control instructions to those.
-SCADA makes it unnecessary for an operator to be assigned to stay at or frequently visit remote locations when those are operating normally \cite{boyer2009scada}.
-A functionality of SCADA in a sensor tower is archiving the data coming from the data logger, the central computer instrument that records measurements from several sensors (anemometers and wind vanes among them).\\
-Typically data are stored  on a cyclic basis: sometimes files are created based on file size, number of points of time period rate \cite{daneels1999scada}. 
-In our case, the data logger archives time series measurements with a specific sampling rate set to be 10 minutes .\\
-For both wind directions and wind speed measurements, we define $m_t^i$ as the time series at time $t$ and on $i$-th position. For each time $t$, data logger stored the minimum value, the maximum value, the standard deviation, and the average of measures.
+SCADA systems are widely used for monitoring and control of Industrial Control System (ICS), including the emerging energy system, transportation systems, gas and water systems, and so on. The primary objective of a SCADA system is to control real-life physical equipment and devices, e.g., an energy system SCADA may be used for monitoring and controlling of the electrical plants \cite{ahmed2015investigation}. SCADA collects data from one or more distant facilities dispersed across a large geographic area. SCADA makes it unnecessary for an operator to be assigned to stay at or frequently visit remote locations when those are operating normally \cite{boyer2009scada}. \\
+A functionality of SCADA system in a sensor tower is archiving the data coming from the data logger, the central computer instrument that records measurements from several sensors. Typically data are stored  on a cyclic basis: sometimes files are created based on file size, number of points of time period rate \cite{daneels1999scada}. In our case, the data logger archives time series measurements with a specific sampling rate set to be 10 minutes. \\
+Through the paper, we will consider time series measurements $\{m_t^i\}$ for both wind directions and wind speed at time $t$ and on $i$-th positions of the sensor on the meteorological mast. For each time $t$, the data logger stores the minumum value, the maximum value, the standard deviation and the avergate of the measurements occured during the $t$-th 10 minutes interval.
 
-\section{Failure in the sensor towers}\label{sec:failures}
-In this section, we are going to describe different existing types of failures in sensor towers. In contrast to control engineering applications, the weather sensor fault detection has a few special features. Namely, the phenomenon itself, weather, can be non-linear and time-varying. The local fault detection model for the weather measurement can change drastically and disturbances can be very large. Fault diagnosis systems aims at detecting and locating degradation in the operation of sensors as early as possible. This way, maintenance operations can be performed in due time, and during time periods with low wind speed. Therefore, maintenance costs are reduced as the number of costly corrective maintenance actions decreases. Besides, the loss of production due to maintenance operations is minimized \cite{luo2014wind}. We will classify these failures in three categories, each one with its own characteristics.
+\section{Failure in the sensor components}\label{sec:failures}
+In this section, we are going to describe different existing types of failures for sensor components in the meteorological mast. We classify these failures in three categories, each one with its own characteristics.
 
 
-??\cite{chandola2009anomaly}.
+?Porque lo citamos??\cite{chandola2009anomaly}.
 
 
 \subsection{Mechanical faults}
@@ -62,10 +61,12 @@ In the wind vane, mechanical failures correspond to a break in the head or tail 
 %\begin{Figure}
 %	\centering	
 %\end{Figure}
-In the anemometers, there is a large variety of mechanical faults and they are detectable in SCADA data. Lightning strikes or hailstorms could provoke a break on the anemometer's spoons, the wind speed measured by a broken anemometer could be both grater or lesser than the real value, depending on the breakage. Also, a blockage could occurs, preventing the rotation of the cups. They appear in certain specific wind conditions, for example when the wind speed is very slow when the air flow is low.
+In the anemometers, there is a large variety of mechanical faults and they are detectable in SCADA data. Lightning strikes or hailstorms could provoke a break on the anemometer's spoons, the wind speed measured by a broken anemometer could be both grater or lesser than the real value, depending on the breakage. Also, a blockage could occurs, preventing the rotation of the cups. They appear in certain specific wind conditions, for example when the wind speed is very slow.
 
 \subsection{Connection  faults}
-Connection faults are due to a faulty connector between sensors, wires and the data logger. These faulty connectors make the measurements unstable in the sense that they are blocking the connections between sensors and the data logger. The effect of the connection faults can interfere with the SCADA data in two possible way: either the faulty connections happens over a long period and hence they are reflected as intermittent values or it can happen between the sampling rate, making the standard deviation bigger than usual. (Figure 2) 
+Connection faults are due to a faulty connector between sensors, wires and the data logger. These faulty connectors make the measurements unstable in the sense that they are blocking the connections between sensors and the data logger. The effect of the connection faults can interfere with the SCADA data in two possible way: either the faulty connections happens over a long period and hence they are reflected as intermittent values or it can happen between the sampling rate, making the standard deviation bigger than usual. %\begin{Figure}
+%	\centering	
+%\end{Figure}
 \subsection{Calibration faults} 
 Calibration faults are due to bad configuration of the data logger, it could be when it is initialized or when a sensor is replaced with another that has a totally different configuration and this is not updated on the data logger. Those faults are easily recognizable in the SCADA data, since their values have a constant offset compared to healthy sensors. In practice those type of faults change the measurement all along the scales. (Figure 3)
 %normalmente por que la calibracion inicial fue incorrecta, o por que se cambió el sensor y la configuración fue incorrecta.
@@ -73,7 +74,7 @@ Calibration faults are due to bad configuration of the data logger, it could be 
 %redactar mas sobre la torre
 
 \section{Algorithms}\label{sec:algorithms}
-In this section, we describe the algorithms used to detect anomalies during the measurement process. Anomalies are patterns in data that do not conform to a well defined notion of normal behavior. This section is divided in three parts: in subsection \ref{subsec:computedvariables}, we define the computed variables used in the algorithms, in \ref{subsec:flagging}, we explain the process to flag time series measurements, and in subsection \ref{subsec:faultdetection}, we show the logic to determine whether the flags are faults or not.  
+In this section, we describe the algorithms used to detect anomalies. Anomalies are patterns in data that do not conform to a well defined notion of normal behavior. This section is divided in three parts; first in \ref{subsec:computedvariables} we define some computed variable for our algorithms. In \ref{subsec:flagging}, we explain how to flag possible faults in the time series measurements, and in subsection \ref{subsec:faultdetection}, we show the logic to determine whether the flags are faults or not.  
 \subsection{Computed variables}\label{subsec:computedvariables}
 We have two types of measurements. In the data logger, wind vanes measures are expressed in degree and the anemometers units are in m/s. The  vanes' measurements are converted first to radians and then to sin and we use this sin result for compute the variables.
 \subsubsection{Ratio}
@@ -84,7 +85,7 @@ R_{t}^{j,i} = \frac{m_{t}^{j}}{m_{t}^{i}},\qquad i \neq j
 \end{equation} 
 
 \subsubsection{Pearson correlations}
-We compute the Pearson correlations only for anemometers. For the $i$-th sensor and for each time $t$, we define the measurement vector with a time window $w$ as 
+We compute the Pearson correlations only for anemometers. For the $i$-th sensor and for each time $t$, we consider the measurement vector with a time window $w$ as 
 \begin{equation}
 M^i_{t,w} = [m_{t-w}^i,m_{t-w+1}^i,\ldots,m_t^i]
 \end{equation}
