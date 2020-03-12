@@ -1,56 +1,48 @@
 This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: AEROFaltDetection.aux
-The style file: IEEEtran.bst
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
+The style file: ieeetr.bst
 Database file #1: BibliografiaAERO.bib.bib
--- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
--- http://www.michaelshell.org/tex/ieeetran/bibtex/
--- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
-
-Done.
-You've used 14 entries,
-            4087 wiz_defined-function locations,
-            904 strings with 10135 characters,
-and the built_in function-call counts, 10469 in all, are:
-= -- 857
-> -- 249
-< -- 89
-+ -- 134
-- -- 43
-* -- 506
-:= -- 1606
-add.period$ -- 30
-call.type$ -- 14
-change.case$ -- 13
-chr.to.int$ -- 198
-cite$ -- 14
-duplicate$ -- 743
-empty$ -- 815
-format.name$ -- 54
-if$ -- 2419
+Warning--empty journal in daneels1999scada
+You've used 19 entries,
+            1876 wiz_defined-function locations,
+            585 strings with 7001 characters,
+and the built_in function-call counts, 4831 in all, are:
+= -- 473
+> -- 205
+< -- 0
++ -- 76
+- -- 57
+* -- 344
+:= -- 709
+add.period$ -- 23
+call.type$ -- 19
+change.case$ -- 16
+chr.to.int$ -- 0
+cite$ -- 20
+duplicate$ -- 250
+empty$ -- 457
+format.name$ -- 57
+if$ -- 1168
 int.to.chr$ -- 0
-int.to.str$ -- 14
-missing$ -- 133
-newline$ -- 65
-num.names$ -- 14
-pop$ -- 291
+int.to.str$ -- 19
+missing$ -- 20
+newline$ -- 64
+num.names$ -- 19
+pop$ -- 62
 preamble$ -- 1
 purify$ -- 0
-quote$ -- 2
-skip$ -- 809
+quote$ -- 0
+skip$ -- 148
 stack$ -- 0
-substring$ -- 475
-swap$ -- 615
-text.length$ -- 23
+substring$ -- 272
+swap$ -- 91
+text.length$ -- 0
 text.prefix$ -- 0
-top$ -- 5
-type$ -- 14
-warning$ -- 0
-while$ -- 50
-width$ -- 16
-write$ -- 158
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 48
+width$ -- 21
+write$ -- 191
+(There was 1 warning)

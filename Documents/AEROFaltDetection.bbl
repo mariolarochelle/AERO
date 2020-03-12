@@ -11,6 +11,11 @@ J.~Ribrant, {\em Reliability Performance and Maintenance?A Survey of Failures
 \newblock PhD thesis, School of Electrical Engineeringm, KTH Royal Institute of
   Technology, 2006.
 
+\bibitem{luo2014wind}
+N.~Luo, Y.~Vidal, and L.~Acho, {\em Wind turbine control and monitoring},
+  vol.~821.
+\newblock Springer, 2014.
+
 \bibitem{tchakoua2014wind}
 P.~Tchakoua, R.~Wamkeue, M.~Ouhrouche, F.~Slaoui-Hasnaoui, T.~Tameghe, and
   G.~Ekemb, ``Wind turbine condition monitoring: State-of-the-art review, new
@@ -83,16 +88,6 @@ S.~A. Boyer, {\em SCADA: supervisory control and data acquisition}.
 
 \bibitem{daneels1999scada}
 A.~Daneels and W.~Salter, ``What is scada?,'' 1999.
-
-\bibitem{luo2014wind}
-N.~Luo, Y.~Vidal, and L.~Acho, {\em Wind turbine control and monitoring},
-  vol.~821.
-\newblock Springer, 2014.
-
-\bibitem{morris1992comparison}
-V.~Morris, J.~Barnard, L.~Wendell, and S.~Tomich, ``Comparison of anemometers
-  for turbulence characterization,'' tech. rep., Pacific Northwest Lab.,
-  Richland, WA (United States), 1992.
 
 \bibitem{chandola2009anomaly}
 V.~Chandola, A.~Banerjee, and V.~Kumar, ``Anomaly detection: A survey,'' {\em

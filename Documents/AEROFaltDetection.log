@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.22)  8 MAR 2020 20:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.22)  12 MAR 2020 19:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -473,7 +473,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Warning: Reference `(Figure 1)' on page 2 undefined on input line 60.
 
 [2] (./AEROFaltDetection.bbl
-Underfull \hbox (badness 3029) in paragraph at lines 15--19
+Underfull \hbox (badness 3029) in paragraph at lines 20--24
 []\OT1/ptm/m/n/8 P. Tchak-oua, R. Wamkeue, M. Ouhrouche, F. Slaoui-Hasnaoui,
  []
 
@@ -481,11 +481,14 @@ Underfull \hbox (badness 3029) in paragraph at lines 15--19
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
  1792 strings out of 493014
  27488 string characters out of 6133350
- 97945 words of memory out of 5000000
+ 96945 words of memory out of 5000000
  5375 multiletter control sequences out of 15000+600000
  36328 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -502,7 +505,7 @@ texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist
 /fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
 pe1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/ti
 mes/utmri8a.pfb>
-Output written on AEROFaltDetection.pdf (3 pages, 127673 bytes).
+Output written on AEROFaltDetection.pdf (3 pages, 127512 bytes).
 PDF statistics:
  59 PDF objects out of 1000 (max. 8388607)
  42 compressed objects within 1 object stream

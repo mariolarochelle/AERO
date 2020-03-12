@@ -44,7 +44,7 @@ Meteorological masts usually have several measuring components, such as baromete
 An anemometer is a device for measuring wind speed. It consists in three horizontal arms where at each end an hemispherical cup is mounted. The air flow pushes the cups in any horizontal direction. Anemometers configuration involves offset, scale, boom orientation, units, and sensor height. Usually a sensor tower has on average six anemometers placed on different heights, and  anemometers are paired at each heights to have redundant measures \cite{clifton2014135}.
 \subsubsection{Wind vane}
 A wind vane is an instrument used for measure the winds direction. When mounted on an elevated shaft or spire, the vane rotates under the influence of the wind and the vane points into the wind. Wind direction is measured in degrees from true north \cite{sayigh2012comprehensive}.
-\subsection{scada data}\label{subsec:scadaData}
+\subsection{SCADA data}\label{subsec:scadaData}
 SCADA systems are widely used for monitoring and control of Industrial Control System (ICS), including the emerging energy system, transportation systems, gas and water systems, and so on. The primary objective of a SCADA system is to control real-life physical equipment and devices, e.g., an energy system SCADA may be used for monitoring and controlling of the electrical plants \cite{ahmed2015investigation}. SCADA collects data from one or more distant facilities dispersed across a large geographic area. SCADA makes it unnecessary for an operator to be assigned to stay at or frequently visit remote locations when those are operating normally \cite{boyer2009scada}. \\
 A functionality of SCADA system in a sensor tower is archiving the data coming from the data logger, the central computer instrument that records measurements from several sensors. Typically data are stored  on a cyclic basis: sometimes files are created based on file size, number of points of time period rate \cite{daneels1999scada}. In our case, the data logger archives time series measurements with a specific sampling rate set to be 10 minutes. \\
 Through the paper, we will consider time series measurements $\{m_t^i\}$ for both wind directions and wind speed at time $t$ and on $i$-th positions of the sensor on the meteorological mast. For each time $t$, the data logger stores the minumum value, the maximum value, the standard deviation and the avergate of the measurements occured during the $t$-th 10 minutes interval.
@@ -57,21 +57,30 @@ In this section, we are going to describe different existing types of failures f
 
 
 \subsection{Mechanical faults}
-In the wind vane, mechanical failures correspond to a break in the head or tail of the instrument: usually these types of failures are produced by a lightning strike or hailstorms. They are reflected in the wind measurements only when the wind is going above or below a certain thresholds. Also, a mechanical faults could provoke a blockage of the wind vane and the results is a unrealistic fixed wind direction over a long period of time \ref{(Figure 1)}.
-%\begin{Figure}
-%	\centering	
-%\end{Figure}
+In the wind vane, mechanical failures correspond to a break in the head or tail of the instrument: usually these types of failures are produced by a lightning strike or hailstorms. They are reflected in the wind measurements only when the wind is going above or below a certain thresholds. Also, a mechanical faults could provoke a blockage of the wind vane and the results is a unrealistic fixed wind direction over a long period of time (See Figure \ref{fig:mechanicalfaults}).
+\begin{figure}
+	\centering
+	\includegraphics[width=\columnwidth]{images/MechanicalFaults.png}
+	\caption{time series measurements for  showing mechanical faults}
+	\label{fig:mechanicalfaults}
+\end{figure}
 In the anemometers, there is a large variety of mechanical faults and they are detectable in SCADA data. Lightning strikes or hailstorms could provoke a break on the anemometer's spoons, the wind speed measured by a broken anemometer could be both grater or lesser than the real value, depending on the breakage. Also, a blockage could occurs, preventing the rotation of the cups. They appear in certain specific wind conditions, for example when the wind speed is very slow.
 
 \subsection{Connection  faults}
-Connection faults are due to a faulty connector between sensors, wires and the data logger. These faulty connectors make the measurements unstable in the sense that they are blocking the connections between sensors and the data logger. The effect of the connection faults can interfere with the SCADA data in two possible way: either the faulty connections happens over a long period and hence they are reflected as intermittent values or it can happen between the sampling rate, making the standard deviation bigger than usual. %\begin{Figure}
-%	\centering	
-%\end{Figure}
+Connection faults are due to a faulty connector between sensors, wires and the data logger. These faulty connectors make the measurements unstable in the sense that they are blocking the connections between sensors and the data logger. The effect of the connection faults can interfere with the SCADA data in two possible way: either the faulty connections happens over a long period and hence they are reflected as intermittent values or it can happen between the sampling rate, making the standard deviation bigger than usual. \begin{figure}
+	\centering
+	\includegraphics[width=\columnwidth]{images/ConnectionFaults.png}
+	\caption{time series measurements for  showing mechanical faults}
+	\label{fig:connectionFaults}
+\end{figure}
 \subsection{Calibration faults} 
 Calibration faults are due to bad configuration of the data logger, it could be when it is initialized or when a sensor is replaced with another that has a totally different configuration and this is not updated on the data logger. Those faults are easily recognizable in the SCADA data, since their values have a constant offset compared to healthy sensors. In practice those type of faults change the measurement all along the scales. (Figure 3)
-%normalmente por que la calibracion inicial fue incorrecta, o por que se cambió el sensor y la configuración fue incorrecta.
-
-%redactar mas sobre la torre
+\begin{figure}
+	\centering
+	\includegraphics[width=\columnwidth]{images/CalibrationFaults.png}
+	\caption{time series measurements for  showing mechanical faults}
+	\label{fig:calibrationFaults}
+\end{figure}
 
 \section{Algorithms}\label{sec:algorithms}
 In this section, we describe the algorithms used to detect anomalies. Anomalies are patterns in data that do not conform to a well defined notion of normal behavior. This section is divided in three parts; first in \ref{subsec:computedvariables} we define some computed variable for our algorithms. In \ref{subsec:flagging}, we explain how to flag possible faults in the time series measurements, and in subsection \ref{subsec:faultdetection}, we show the logic to determine whether the flags are faults or not.  
