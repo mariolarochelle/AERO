@@ -1,13 +1,13 @@
 \documentclass[journal]{IEEEtran}
 \usepackage[english]{babel}
-
+\usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 %\usepackage[spanish]{babel}
 \begin{document}
 
 \title{Weather sensor fault detection in meteorological masts}
 
-\author{Franco Piergallini Guida, Filippo Visco-Comandini, Máximo Iaconis}
+\author{Franco Piergallini Guida, Maximo Iaconis, Filippo Visco-Comandini}
 \maketitle
 
 \begin{abstract}
@@ -58,43 +58,43 @@ In this section, we are going to describe different existing types of failures f
 
 \subsection{Mechanical faults}
 In the wind vane, mechanical failures correspond to a break in the head or tail of the instrument: usually these types of failures are produced by a lightning strike or hailstorms. They are reflected in the wind measurements only when the wind is going above or below a certain thresholds. Also, a mechanical faults could provoke a blockage of the wind vane and the results is a unrealistic fixed wind direction over a long period of time (See Figure \ref{fig:mechanicalfaults}).
-\begin{figure}
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=\columnwidth]{images/MechanicalFaults.png}
-	\caption{time series measurements for  showing mechanical faults}
+	\includegraphics[width=\columnwidth]{Images/MechanicalFaults.png}
+	\caption{XXXXX.Not sure that this plot is correct.}
 	\label{fig:mechanicalfaults}
 \end{figure}
 In the anemometers, there is a large variety of mechanical faults and they are detectable in SCADA data. Lightning strikes or hailstorms could provoke a break on the anemometer's spoons, the wind speed measured by a broken anemometer could be both grater or lesser than the real value, depending on the breakage. Also, a blockage could occurs, preventing the rotation of the cups. They appear in certain specific wind conditions, for example when the wind speed is very slow.
 
-\subsection{Connection  faults}
-Connection faults are due to a faulty connector between sensors, wires and the data logger. These faulty connectors make the measurements unstable in the sense that they are blocking the connections between sensors and the data logger. The effect of the connection faults can interfere with the SCADA data in two possible way: either the faulty connections happens over a long period and hence they are reflected as intermittent values or it can happen between the sampling rate, making the standard deviation bigger than usual. \begin{figure}
+\subsection{Connection faults}
+Connection faults are due to a faulty connector between sensors, wires and the data logger. These faulty connectors make the measurements unstable in the sense that they are blocking the connections between sensors and the data logger (See Figure \ref{fig:connectionFaults}). The effect of the connection faults can interfere with the SCADA data in two possible way: either the faulty connections happens over a long period and hence they are reflected as intermittent values or it can happen between the sampling rate, making the standard deviation bigger than usual. \begin{figure}[h]
 	\centering
-	\includegraphics[width=\columnwidth]{images/ConnectionFaults.png}
-	\caption{time series measurements for  showing mechanical faults}
+	\includegraphics[width=\columnwidth]{Images/ConnectionFaults.png}
+	\caption{The anemometer "Ch4" has some faulty connection wire and sometimes the wind speed drops to zero.}
 	\label{fig:connectionFaults}
 \end{figure}
 \subsection{Calibration faults} 
-Calibration faults are due to bad configuration of the data logger, it could be when it is initialized or when a sensor is replaced with another that has a totally different configuration and this is not updated on the data logger. Those faults are easily recognizable in the SCADA data, since their values have a constant offset compared to healthy sensors. In practice those type of faults change the measurement all along the scales. (Figure 3)
-\begin{figure}
+Calibration faults are due to bad configuration of the data logger, it could be when it is initialized or when a sensor is replaced with another that has a totally different configuration and this is not updated on the data logger. Those faults are easily recognizable in the SCADA data, since their values have a constant offset compared to healthy sensors. In practice those type of faults change the measurement all along the scales (See Figure \ref{fig:calibrationFaults})
+\begin{figure}[h]
 	\centering
-	\includegraphics[width=\columnwidth]{images/CalibrationFaults.png}
-	\caption{time series measurements for  showing mechanical faults}
+	\includegraphics[width=\columnwidth]{Images/CalibrationFaults.png}
+	\caption{In this case, the anemometer "Ch2Anem" was badly calibrated and it shows constant off with "Ch1Anem".}
 	\label{fig:calibrationFaults}
 \end{figure}
 
 \section{Algorithms}\label{sec:algorithms}
-In this section, we describe the algorithms used to detect anomalies. Anomalies are patterns in data that do not conform to a well defined notion of normal behavior. This section is divided in three parts; first in \ref{subsec:computedvariables} we define some computed variable for our algorithms. In \ref{subsec:flagging}, we explain how to flag possible faults in the time series measurements, and in subsection \ref{subsec:faultdetection}, we show the logic to determine whether the flags are faults or not.  
-\subsection{Computed variables}\label{subsec:computedvariables}
-We have two types of measurements. In the data logger, wind vanes measures are expressed in degree and the anemometers units are in m/s. The  vanes' measurements are converted first to radians and then to sin and we use this sin result for compute the variables.
-\subsubsection{Ratio}
-The ratio is only computed for the anemometers type sensors. $m_t^{i}$ represents the measurement at time $t$ on the $i$-th sensor.
-For each sensor type, we compute the ratio among all measurements in the sensors as
+Anomalies are patterns in data that do not conform to a well defined notion of normal behavior. In this section we describe the algorithms used to detect anomalies. First, we need to define some auxiliary variables that allow us the possibility of flagging certains sensors. The flagging happens in various circumstances. Once variables are properly flagged, we show the logic to determine if a fault is detected.  
+\subsection{Auxiliary variables}\label{subsec:computedvariables}
+In the data logger, anemometers measures the wind speed and their units are expressed in \emph{m/s}. The wind direction is expressed as angle in degrees on a compass rose, where the origin is pointing to the North. In order to have a continuous values for the vanes' measurements, we consider their sinus values for these variables.
+\subsubsection{Speed wind ratio}
+The ratio is only computed for the anemometers type sensors. If $m_t^{i}$ represents the measurement at time $t$ on the $i$-th sensor, the ratio is defined as
 \begin{equation}
-R_{t}^{j,i} = \frac{m_{t}^{j}}{m_{t}^{i}},\qquad i \neq j 
+R_{t}^{j,i} = \frac{m_{t}^{j}}{m_{t}^{i}},\qquad i \neq j,
 \end{equation} 
+for all possible sensor coupling. Paired anemometers produces reduntant measures because they are placed at the same  height in mast towers: in theory their ration should always be equal to 1.
 
-\subsubsection{Pearson correlations}
-We compute the Pearson correlations only for anemometers. For the $i$-th sensor and for each time $t$, we consider the measurement vector with a time window $w$ as 
+\subsubsection{Speed wind Pearson correlations}
+For the $i$-th sensor and for each time $t$, we consider the measurement vector with a time window $w$ as 
 \begin{equation}
 M^i_{t,w} = [m_{t-w}^i,m_{t-w+1}^i,\ldots,m_t^i]
 \end{equation}
@@ -103,20 +103,24 @@ We compute the moving Pearson correlation depending on the time window $w$ betwe
 C^{i,j}_{t,w}= \rho\left( \frac{M^i_{t,w}}{M^j_{t,w}}\right)
 \end{equation}
 
-\subsubsection{Difference}
-A difference between vanes sin values is computed as follow
+\subsubsection{Wind direction difference}
+The difference between vanes sinus values is computed as follow
 \begin{equation}
 D_{t}^{j,i} = {m_{t}^{j} - m_{t}^{i}},\qquad i \neq j 
 \end{equation} 
+for each couple of vanes.
 
 
 \subsection{Flagging}\label{subsec:flagging}
-There are several thresholds that serve to flag a measurement as a possible anomaly. Any time that a measurement crosses a specific threshold for one of its computed variables, this measurement is marked with a flag as a possible anomaly. 
-% Estoy repitiendo possible anomaly
-% cuando una measurement pasa un threshold es marcada como anomalo. Explicar los 3 thresholds.
-Each computed variable has its own threshold. \\
-Physical boundaries are set for the different sensors types. If a signal measurement value is greater than the boundary is flagged as anomalous. Considering the average of wind speed, a value greater than 70 $m/s$ would imply that over a 10 minutes period, the wind speed registered was in some occasion much greater than this value. This condition could be a key used for detecting anomalous behaviors on an anemometer.
-%explicar que es a cada tiempo
+At any time $t$, a variable is flagged if passes a specific threshold. Flagging a variable at a time $t$ means the correspondent sensor has an anomaly in the measurements.
+These are the events that triggers the flag in particular time $t$
+\begin{itemize}
+\item $\|D_{t}^{j,i}\| \leq T_{vane}$
+\item $\|C^{i,j}_{t,w}\| \leq T_{anem,C}$
+\item $\|R_{t}^{j,i}\| \leq T_{anem,R}$
+\item $s_t^i>T_{wind}$
+\end{itemize}
+The last condition is fail conditions for the anemeter. The average speed has certain limit $T_{wind}$: above this limit, the wind speed is not realistic and hence the sensor is faulty. In \cite{}, the speed wind threshold is set to $70$ \emph{m/s}.
 
 \subsection{Fault detection}\label{subsec:faultdetection}
 % identificar cuando el sensor tiene flags
