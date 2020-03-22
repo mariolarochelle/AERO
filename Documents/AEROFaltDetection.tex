@@ -1,4 +1,4 @@
-\documentclass[journal]{IEEEtran}
+\documentclass[conference]{IEEEtran}
 \usepackage[english]{babel}
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
@@ -7,12 +7,31 @@
 
 \title{Weather sensor fault detection in meteorological masts}
 
-\author{Franco Piergallini Guida, Maximo Iaconis, Filippo Visco-Comandini}
+\author{\IEEEauthorblockN{Franco Piergallini Guida}
+\IEEEauthorblockA{\textit{Universidad de Palermo}\\
+Buenos Aires, Argentina \\
+XXXX}
+
+\and
+\IEEEauthorblockN{Maximo Iaconis}
+\IEEEauthorblockA{\textit{Universidad de Palermo}\\
+Buenos Aires, Argentina \\
+XXXX}
+
+\and
+\IEEEauthorblockN{Filippo Visco-Comandini}
+\IEEEauthorblockA{\textit{Universidad de Palermo}\\
+Buenos Aires, Argentina \\
+fvisco@palermo.edu}
+}
+
+
+%\author{Franco Piergallini Guida, Maximo Iaconis, Filippo Visco-Comandini}
 \maketitle
 
 \begin{abstract}
-Wind power has become the world's fastest growing renewable technology. The world-wide wind power installed capacity has exceeded 518 GW, and the new installations during the last three years was an average of 50 GW per year. A major issue with wind power system and with meteorological masts is the relatively high cost of operation and maintenance (OM). Wind turbines and sensor towers are hard-to-access structures, and they are often located in remote areas. That's why continuous monitoring of wind turbine health using automated failure detection algorithms can improve turbine reliability and reduce maintenance costs by detecting failures before they reach a catastrophic stage and by eliminating unnecessary scheduled maintenance.
-Most of the wind turbines and meteorological masts have supervisory control and data acquisition (SCADA) system and it rapidly became the standard. SCADA has been used in other industries for accurate and timely detection, diagnostics and prognostics of failures and performance problems.
+Wind power has become the world's fastest growing renewable technology. The world-wide wind power installed capacity has exceeded 597 GW, and the new installations during the last three years was an average of 50 GW per year. A major issue with wind power system and with meteorological masts is the relatively high cost of operation and maintenance (OM). Wind turbines and sensor towers are hard-to-access structures, and they are often located in remote areas. That's why continuous monitoring of wind turbine health using automated failure detection algorithms can improve turbine reliability and reduce maintenance costs by detecting failures before they reach a catastrophic stage and by eliminating unnecessary scheduled maintenance.
+Most of the wind turbines and meteorological masts have supervisory control and data acquisition (SCADA) system and it rapidly became the standard. SCADA data analysis has been used in other industries for accurate and timely detection, diagnostics and prognostics of failures and performance problems.
 In the present work, mathematical methods are proposed for sensor fault detection for meteorological masts through the analysis of the SCADA data. The idea is to compare and analyze measurements coming from the various sensors located in the same tower and different heights. We used a number of measurements to develop anomaly detection algorithms and investigated classification techniques using manual check and model parameter tuning. 
 These methods are tested on wind masts situated in Argentina.
 \end{abstract}
@@ -30,8 +49,7 @@ clustering algorithms and principal components analysis \cite{kim2011use}, artif
 Our research focus the fault diagnosis on meteorological masts,   
 but the literature about these techniques is quite limited \cite{hasu2006weather} .
 
-This paper proposes a methodology for fault diagnosis in sensor tower using a data-driven approach through the analysis of the SCADA data of two components. The anemometers and wind vanes measurements are analyzed with two different algorithms in order to develop anomaly detection techniques using manual check and model parameter tuning. 
-
+This paper proposes a methodology for fault diagnosis in sensor tower using a data-driven approach through the analysis of the SCADA data of two components. The anemometers and wind vanes measurements are analyzed with two different algorithms in order to develop anomaly detection techniques using manual check and model parameter tuning. Measurements comes from real-world wind turbines, that use same sensors.  \\
 This paper is organized as following. In section \ref{sec:sensortower}, we describe the SCADA data coming from the two sensor tower components used in the algorithms, in section \ref{sec:failures} we show the different kind of failures that can happen in the sensor towers. In section \ref{sec:algorithms}, fault detection algorithms are presented. Results and discussion are in section \ref{sec:results} and the conclusion can be found in section \ref{sec:conclusion}.
 
 \section{Meteorological mast components}\label{sec:sensortower}
@@ -50,10 +68,7 @@ A functionality of SCADA system in a sensor tower is archiving the data coming f
 Through the paper, we will consider time series measurements $\{m_t^i\}$ for both wind directions and wind speed at time $t$ and on $i$-th positions of the sensor on the meteorological mast. For each time $t$, the data logger stores the minumum value, the maximum value, the standard deviation and the avergate of the measurements occured during the $t$-th 10 minutes interval.
 
 \section{Failure in the sensor components}\label{sec:failures}
-In this section, we are going to describe different existing types of failures for sensor components in the meteorological mast. We classify these failures in three categories, each one with its own characteristics.
-
-
-?Porque lo citamos??\cite{chandola2009anomaly}.
+We are going to describe different existingtypes of failures in sensor towers. In contrast to control engineeringapplications, the weather sensor fault detection has afew special features. %?Porque lo citamos??\cite{chandola2009anomaly}.
 
 
 \subsection{Mechanical faults}
@@ -61,7 +76,7 @@ In the wind vane, mechanical failures correspond to a break in the head or tail 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=\columnwidth]{Images/MechanicalFaults.png}
-	\caption{XXXXX.Not sure that this plot is correct.}
+	\caption{Chanel Vane 14 is constant, because the wind vane is blocked. Chanel Vane 13 gives some realistic measures.}
 	\label{fig:mechanicalfaults}
 \end{figure}
 In the anemometers, there is a large variety of mechanical faults and they are detectable in SCADA data. Lightning strikes or hailstorms could provoke a break on the anemometer's spoons, the wind speed measured by a broken anemometer could be both grater or lesser than the real value, depending on the breakage. Also, a blockage could occurs, preventing the rotation of the cups. They appear in certain specific wind conditions, for example when the wind speed is very slow.
@@ -81,6 +96,8 @@ Calibration faults are due to bad configuration of the data logger, it could be 
 	\caption{In this case, the anemometer "Ch2Anem" was badly calibrated and it shows constant off with "Ch1Anem".}
 	\label{fig:calibrationFaults}
 \end{figure}
+Sometimes both redundant sensor can have calibration failures.
+Calibration is sometimes imposed by the data logger system, and rebooting the data logger may cause a failure in applying the correspondent calibration for each sensor for offset and slope.
 
 \section{Algorithms}\label{sec:algorithms}
 Anomalies are patterns in data that do not conform to a well defined notion of normal behavior. In this section we describe the algorithms used to detect anomalies. First, we need to define some auxiliary variables that allow us the possibility of flagging certains sensors. The flagging happens in various circumstances. Once variables are properly flagged, we show the logic to determine if a fault is detected.  
@@ -94,13 +111,13 @@ R_{t}^{j,i} = \frac{m_{t}^{j}}{m_{t}^{i}},\qquad i \neq j,
 for all possible sensor coupling. Paired anemometers produces reduntant measures because they are placed at the same  height in mast towers: in theory their ration should always be equal to 1.
 
 \subsubsection{Speed wind Pearson correlations}
-For the $i$-th sensor and for each time $t$, we consider the measurement vector with a time window $w$ as 
+For the $i$-th sensor and for each time $t$, we consider the measurement vector with a time window $\omega$ as 
 \begin{equation}
-M^i_{t,w} = [m_{t-w}^i,m_{t-w+1}^i,\ldots,m_t^i]
+M^i_{t,\omega} = [m_{t-\omega}^i,m_{t-\omega+1}^i,\ldots,m_t^i]
 \end{equation}
 We compute the moving Pearson correlation depending on the time window $w$ between the $i$-th and the $j$-th sensors
 \begin{equation}
-C^{i,j}_{t,w}= \rho\left( \frac{M^i_{t,w}}{M^j_{t,w}}\right)
+C^{i,j}_{t,\omega}= \rho\left( \frac{M^i_{t,\omega}}{M^j_{t,\omega}}\right)
 \end{equation}
 
 \subsubsection{Wind direction difference}
@@ -116,39 +133,68 @@ At any time $t$, a variable is flagged if passes a specific threshold. Flagging 
 These are the events that triggers the flag in particular time $t$
 \begin{itemize}
 \item $\|D_{t}^{j,i}\| \leq T_{vane}$
-\item $\|C^{i,j}_{t,w}\| \leq T_{anem,C}$
+\item $\|C^{i,j}_{t,\omega}\| \leq T_{anem,C}$
 \item $\|R_{t}^{j,i}\| \leq T_{anem,R}$
 \item $s_t^i>T_{wind}$
 \end{itemize}
-The last condition is fail conditions for the anemeter. The average speed has certain limit $T_{wind}$: above this limit, the wind speed is not realistic and hence the sensor is faulty. In \cite{}, the speed wind threshold is set to $70$ \emph{m/s}.
+where $T_{vane}$ is the threshold for vanes,  $T_{anem,C}$ is the correlation threshold for anemometers,  $ T_{anem,R}$ is the ratio threshold for anemometers,  and  $T_{wind}$ is the maxim wind speed threshold anemoters.\\ 
+The last condition is fail condition for the anemeter. The average speed has certain limit $T_{wind}$: above this limit, the wind speed is not realistic and hence the sensor is faulty. In \cite{}, the speed wind threshold is set to $70$ \emph{m/s}.
 
 \subsection{Fault detection}\label{subsec:faultdetection}
-% identificar cuando el sensor tiene flags
 
-We consider that a sensor is faulty when it is flagged by our algorithm.
+We consider that a sensor has a failure when the following conditions are verified for anemometers and wind vanes.
 \subsubsection{Anemometer}
-The $i$-th anemometer is flagged and detected as an anomaly if the following conditions are verified:
+The $i$-th anemometer  detected as an anomaly if the following conditions are verified:
 \begin{itemize}
 	\item At least two measurements between $R_{t}^{j,i}$ and $C_{t}^{j,i}$ are flagged for $i \neq j$.
-	\item At least one of the previous flag belongs to a reduntant sensor.
+	\item At least one of the previous flag must belong to a reduntant sensor.
 \end{itemize}
-An anemometer is also considered faulty when the measurement values are greater than 70 $m/s$.
 
 \subsubsection{Wind vane}
-A wind vane is detected as an anomaly only when 
+A wind vane is considered a faulty wind vane  only when 
 \begin{itemize}
 	\item At least one of $D_t^{i,j}$ is flagged.
 \end{itemize}
 
 \section{Results and discussion}\label{sec:results}
-Parameter tuning.
-With this process, we obtained the bests thresholds for the Pearson correlation and the ratio. We performed the algorithm for several ranges of values of the parameters and contrast it with the real faults on data sets, to obtain the combination that has the best sensibility for detect real faults. The parameters that we can adjust are the quotient on the ratio, correlation result and correlation window, this windows are the number of previous measurements that we will take to do this operation.
+We tested our algorithms to two different real world datasets. Both of them are measurements coming from mast towers in Argentina for the period but the maintenance operations are unkwonw as well as any failure detected.
+The fault detection process is still a working in progress, and the detected faults were visually checked. Through the entire process, we were able to identify several realistic possible faults and we used them benchmarks to tunes various parameters.
+
+With this process, we tuned the thresholds for vanes and anemometers ($T_{vane}$,$T_{anem,C}$,$T_{anem,R}$) and the correlation time window ($\omega$). We performed the algorithm for several ranges of values of the parameters and compare it with the realistic faults on data sets, in order to obtain the combination that has the best sensibility for detect real faults. (See Fig.\ref{fig:parametersAnalysis}).
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\columnwidth]{Images/CalibrationFaults.png}
+	\caption{Parameters sensitivity analysis}
+	\label{fig:parametersAnalysis}
+\end{figure}
+
+We concluded that the best choice for this parameters is given in the Table \ref{table:parameterChoice}.
+\begin{table}
+\begin{center}
+	\begin{tabular}{ |l|l| } 
+	 \hline
+	 Parameter & Values  \\ 
+	 \hline
+	 $T_{vane}$ & 0.1\\
+	 $T_{anem,C}$ &0.5\\
+	 $T_{anem,R}$ & 10 \\ 
+	 $\omega$ & 3 \\
+	 \hline
+	\end{tabular}
+\caption{Parameters values}
+\label{table:parameterChoice}
+\end{center}
+\end{table}
+
+Despite the promising results, our algorithm still need to be tested in a real world dataset in which the fault types and their locations are known.
 
 \section{Conclusion}\label{sec:conclusion}
-A methodology to predict faults using data provided by SCADA systems and fault files was presented. 
 
+In the industry 4.0, the application of fault detection and prediction algorithms is crucial. In this context, we offered a solution to an real industrial problem. A methodology to predict faults using data provided by SCADA systems and fault files was presented. 
 
-
+This work bring an initial research advancement for similary sensor analysis applied to wind turbines. Despite the fact this algorithm is still in a validation stage, once its reliability is confirmed, it can be applied to other sensor systems. The preseny work is a work in progress with the goal to become an effective fault detection system.
+As future work, it si worth consider the prediction of the fault in sensors before they becomes blockers.
 
 \bibliographystyle{ieeetr}
 \bibliography{BibliografiaAERO.bib}
