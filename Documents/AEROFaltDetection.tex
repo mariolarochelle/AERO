@@ -157,7 +157,8 @@ A wind vane is considered a faulty wind vane  only when
 \end{itemize}
 
 \section{Results and discussion}\label{sec:results}
-We tested our algorithms to two different real world datasets. Both of them are measurements coming from mast towers in Argentina for the period but the maintenance operations are unkwonw as well as any failure detected.
+We tested our algorithms to two different real world datasets. Both of them are measurements coming from mast towers  for the period of 12 months located in Argentina and Mexico. Maintenance operations as well as any detected failures or sensor replacements are unknown.
+
 The fault detection process is still a working in progress, and the detected faults were visually checked. Through the entire process, we were able to identify several realistic possible faults and we used them benchmarks to tunes various parameters.
 
 With this process, we tuned the thresholds for vanes and anemometers ($T_{vane}$,$T_{anem,C}$,$T_{anem,R}$) and the correlation time window ($\omega$). We performed the algorithm for several ranges of values of the parameters and compare it with the realistic faults on data sets, in order to obtain the combination that has the best sensibility for detect real faults. (See Fig.\ref{fig:parametersAnalysis}).
@@ -170,7 +171,7 @@ With this process, we tuned the thresholds for vanes and anemometers ($T_{vane}$
 \end{figure}
 
 We concluded that the best choice for this parameters is given in the Table \ref{table:parameterChoice}.
-\begin{table}
+\begin{table}[h]
 \begin{center}
 	\begin{tabular}{ |l|l| } 
 	 \hline
