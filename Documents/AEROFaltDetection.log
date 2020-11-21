@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.22)  26 MAR 2020 09:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.12.22)  31 MAY 2020 07:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -552,29 +552,27 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+[1{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 68.
+(Font)              <7> on input line 63.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 68.
+(Font)              <5> on input line 63.
 
 <Images/MechanicalFaults.png, id=10, 307.3884pt x 161.8848pt>
 File: Images/MechanicalFaults.png Graphic file (type png)
 
 <use Images/MechanicalFaults.png>
-Package pdftex.def Info: Images/MechanicalFaults.png used on input line 81.
+Package pdftex.def Info: Images/MechanicalFaults.png used on input line 76.
 (pdftex.def)             Requested size: 252.0pt x 132.71921pt.
 
 <Images/ConnectionFaults.png, id=12, 375.804pt x 189.3474pt>
 File: Images/ConnectionFaults.png Graphic file (type png)
 
 <use Images/ConnectionFaults.png>
-Package pdftex.def Info: Images/ConnectionFaults.png used on input line 90.
+Package pdftex.def Info: Images/ConnectionFaults.png used on input line 85.
 (pdftex.def)             Requested size: 252.0pt x 126.96898pt.
 
 
@@ -584,10 +582,14 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: Images/CalibrationFaults.png Graphic file (type png)
 
 <use Images/CalibrationFaults.png>
-Package pdftex.def Info: Images/CalibrationFaults.png used on input line 98.
+Package pdftex.def Info: Images/CalibrationFaults.png used on input line 93.
 (pdftex.def)             Requested size: 252.0pt x 130.3118pt.
- [2 <./Images/MechanicalFaults.png>]
-Underfull \hbox (badness 1360) in paragraph at lines 150--152
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2 <./Images/MechanicalFaults.png>]
+Underfull \hbox (badness 1360) in paragraph at lines 145--147
  \OT1/ptm/m/it/10 1) Anemome-ter: [][] \OT1/ptm/m/n/10 The $\OML/cmm/m/it/10 i$
 \OT1/ptm/m/n/10 -th anemome-ter de-tected as an
  []
@@ -597,13 +599,13 @@ Underfull \hbox (badness 1360) in paragraph at lines 150--152
 File: Images/SensitivityAnalysis2.png Graphic file (type png)
 
 <use Images/SensitivityAnalysis2.png>
-Package pdftex.def Info: Images/SensitivityAnalysis2.png used on input line 171
+Package pdftex.def Info: Images/SensitivityAnalysis2.png used on input line 166
 .
 (pdftex.def)             Requested size: 252.0pt x 149.00992pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 179.
+(Font)              <8> on input line 174.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 179.
+(Font)              <6> on input line 174.
  (./AEROFaltDetection.bbl
 Underfull \hbox (badness 3029) in paragraph at lines 20--24
 []\OT1/ptm/m/n/8 P. Tchak-oua, R. Wamkeue, M. Ouhrouche, F. Slaoui-Hasnaoui,
@@ -625,11 +627,11 @@ Before submitting the final camera ready copy, remember to:
 Here is how much of TeX's memory you used:
  3083 strings out of 493014
  47295 string characters out of 6133350
- 122483 words of memory out of 5000000
+ 123483 words of memory out of 5000000
  6591 multiletter control sequences out of 15000+600000
  37690 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,10n,23p,771b,253s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,10n,23p,773b,253s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/
 texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2016/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2016/tex
@@ -644,7 +646,7 @@ s/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts
 ype1/urw/times/utmb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/t
 imes/utmbi8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr
 8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on AEROFaltDetection.pdf (4 pages, 1038595 bytes).
+Output written on AEROFaltDetection.pdf (4 pages, 1038531 bytes).
 PDF statistics:
  79 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream

@@ -10,13 +10,13 @@
 \author{\IEEEauthorblockN{Franco Piergallini Guida}
 \IEEEauthorblockA{\textit{Universidad de Palermo}\\
 Buenos Aires, Argentina \\
-XXXX}
+francopierguida@gmail.com}
 
 \and
 \IEEEauthorblockN{Maximo Iaconis}
 \IEEEauthorblockA{\textit{Universidad de Palermo}\\
 Buenos Aires, Argentina \\
-XXXX}
+iaconis@live.com.ar}
 
 \and
 \IEEEauthorblockN{Filippo Visco-Comandini}
@@ -37,18 +37,13 @@ These methods are tested on wind masts situated in Argentina.
 \end{abstract}
 \section{Introduction}
 Renewable energy source is playing an important role in the global energy mix, as a mean of reducing the impact of energy production on climate change and wind power has become the fastest growing renewable technology. 
-Wind energy is fundamentally used to produce electric energy. Wind turbines (WTs) are unmanned, remote power plants.  Efforts have been made to develop efficient and cost-effective condition monitoring techniques for wind turbines \cite{yang2014wind}. Unlike conventional power stations, WTs are exposed to highly variable and harsh weather conditions, including calm to severe winds, tropical heat, lightning, arctic cold, hail, and snow. Due to these external variations, WTs undergo constantly changing loads, which result in highly variable operational conditions that lead to intense mechanical stress \cite{ribrant2006thesis}. 
-
-Supervisory control and data acquisition (SCADA) is an application that collects data from a system and sends them to a central computer for monitoring and controlling. Current controlling monitor (CM) systems essentially provide the necessary sensor and capability of data capture required for monitoring.
-
-In contrast to control engineering applications, the weather sensor fault detection has a few special features. Namely, the phenomenon itself, weather, can be non-linear and time-varying. The local fault detection model for the weather measurement can change drastically and disturbances can be very large. Fault diagnosis systems aims at detecting and locating degradation in the operation of sensors as early as possible. This way, maintenance operations can be performed in due time, and during time periods with low wind speed. Therefore, maintenance costs are reduced as the number of costly corrective maintenance actions decreases. Besides, the loss of production due to maintenance operations is minimized \cite{luo2014wind}.
-
+Wind energy is fundamentally used to produce electric energy. Wind turbines (WTs) are unmanned, remote power plants.  Efforts have been made to develop efficient and cost-effective condition monitoring techniques for wind turbines \cite{yang2014wind}. Unlike conventional power stations, WTs are exposed to highly variable and harsh weather conditions, including calm to severe winds, tropical heat, lightning, arctic cold, hail, and snow. Due to these external variations, WTs undergo constantly changing loads, which result in highly variable operational conditions that lead to intense mechanical stress \cite{ribrant2006thesis}. \\
+Supervisory control and data acquisition (SCADA) is an application that collects data from a system and sends them to a central computer for monitoring and controlling. Current controlling monitor (CM) systems essentially provide the necessary sensor and capability of data capture required for monitoring.\\
+In contrast to control engineering applications, the weather sensor fault detection has a few special features. Namely, the phenomenon itself, weather, can be non-linear and time-varying. The local fault detection model for the weather measurement can change drastically and disturbances can be very large. Fault diagnosis systems aims at detecting and locating degradation in the operation of sensors as early as possible. This way, maintenance operations can be performed in due time, and during time periods with low wind speed. Therefore, maintenance costs are reduced as the number of costly corrective maintenance actions decreases. Besides, the loss of production due to maintenance operations is minimized \cite{luo2014wind}.\\
 The research for  fault detection and diagnostic techniques for wind turbines has been widely studying  \cite{tchakoua2014wind,wymore2015survey,lu2009review}. Some of the techniques involves
-clustering algorithms and principal components analysis \cite{kim2011use}, artificial intelligence based framework \cite{wang2014scada}, performance evaluation and wake analysis \cite{astolfi2016mathematical}, machine learning algorithm \cite{kusiak2011prediction,schlechtingen2011comparative} and neuro fuzzy approach \cite{schlechtingen2012condition}.
-
+clustering algorithms and principal components analysis \cite{kim2011use}, artificial intelligence based framework \cite{wang2014scada}, performance evaluation and wake analysis \cite{astolfi2016mathematical}, machine learning algorithm \cite{kusiak2011prediction,schlechtingen2011comparative} and neuro fuzzy approach \cite{schlechtingen2012condition}.\\
 Our research focus the fault diagnosis on meteorological masts,   
-but the literature about these techniques is quite limited \cite{hasu2006weather} .
-
+but the literature about these techniques is quite limited \cite{hasu2006weather} .\\
 This paper proposes a methodology for fault diagnosis in sensor tower using a data-driven approach through the analysis of the SCADA data of two components. The anemometers and wind vanes measurements are analyzed with two different algorithms in order to develop anomaly detection techniques using manual check and model parameter tuning. Measurements comes from real-world wind turbines, that use same sensors.  \\
 This paper is organized as following. In section \ref{sec:sensortower}, we describe the SCADA data coming from the two sensor tower components used in the algorithms, in section \ref{sec:failures} we show the different kind of failures that can happen in the sensor towers. In section \ref{sec:algorithms}, fault detection algorithms are presented. Results and discussion are in section \ref{sec:results} and the conclusion can be found in section \ref{sec:conclusion}.
 
@@ -68,7 +63,10 @@ A functionality of SCADA system in a sensor tower is archiving the data coming f
 Through the paper, we will consider time series measurements $\{m_t^i\}$ for both wind directions and wind speed at time $t$ and on $i$-th positions of the sensor on the meteorological mast. For each time $t$, the data logger stores the minumum value, the maximum value, the standard deviation and the avergate of the measurements occured during the $t$-th 10 minutes interval.
 
 \section{Failure in the sensor components}\label{sec:failures}
-We are going to describe different existingtypes of failures in sensor towers. In contrast to control engineeringapplications, the weather sensor fault detection has afew special features. %?Porque lo citamos??\cite{chandola2009anomaly}.
+We are going to describe different existing
+types of failures in sensor towers. In contrast to control engineering
+applications, the weather sensor fault detection has a
+few special features. %?Porque lo citamos??\cite{chandola2009anomaly}.
 
 
 \subsection{Mechanical faults}
