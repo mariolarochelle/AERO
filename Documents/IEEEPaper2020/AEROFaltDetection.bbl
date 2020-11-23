@@ -89,8 +89,4 @@ S.~A. Boyer, {\em SCADA: supervisory control and data acquisition}.
 \bibitem{daneels1999scada}
 A.~Daneels and W.~Salter, ``What is scada?,'' 1999.
 
-\bibitem{chandola2009anomaly}
-V.~Chandola, A.~Banerjee, and V.~Kumar, ``Anomaly detection: A survey,'' {\em
-  ACM computing surveys (CSUR)}, vol.~41, no.~3, p.~15, 2009.
-
 \end{thebibliography}

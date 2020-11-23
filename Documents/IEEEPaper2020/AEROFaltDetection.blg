@@ -4,45 +4,45 @@ The top-level auxiliary file: AEROFaltDetection.aux
 The style file: ieeetr.bst
 Database file #1: BibliografiaAERO.bib.bib
 Warning--empty journal in daneels1999scada
-You've used 19 entries,
+You've used 18 entries,
             1876 wiz_defined-function locations,
-            585 strings with 7001 characters,
-and the built_in function-call counts, 4831 in all, are:
-= -- 473
-> -- 205
+            578 strings with 6866 characters,
+and the built_in function-call counts, 4605 in all, are:
+= -- 452
+> -- 194
 < -- 0
-+ -- 76
-- -- 57
-* -- 344
-:= -- 709
-add.period$ -- 23
-call.type$ -- 19
-change.case$ -- 16
++ -- 72
+- -- 54
+* -- 326
+:= -- 674
+add.period$ -- 22
+call.type$ -- 18
+change.case$ -- 15
 chr.to.int$ -- 0
-cite$ -- 20
-duplicate$ -- 250
-empty$ -- 457
-format.name$ -- 57
-if$ -- 1168
+cite$ -- 19
+duplicate$ -- 237
+empty$ -- 437
+format.name$ -- 54
+if$ -- 1112
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 20
-newline$ -- 64
-num.names$ -- 19
-pop$ -- 62
+int.to.str$ -- 18
+missing$ -- 19
+newline$ -- 61
+num.names$ -- 18
+pop$ -- 60
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 148
+skip$ -- 141
 stack$ -- 0
-substring$ -- 272
-swap$ -- 91
+substring$ -- 268
+swap$ -- 86
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 48
-width$ -- 21
-write$ -- 191
+while$ -- 46
+width$ -- 20
+write$ -- 180
 (There was 1 warning)

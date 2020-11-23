@@ -49,7 +49,21 @@ This paper is organized as following. In section \ref{sec:sensortower}, we descr
 
 \section{Meteorological mast components}\label{sec:sensortower}
 Meteorological masts are towers made of steel where measuring components are installed. In this section we explain two components of sensor towers called anemometers and wind vanes and we describe how these components records their data through the SCADA system.
-The sensor towers, are  lattice constructions consisting in three main beams shored up by smaller beams. The mast is a long slender construction, which gives an almost two-dimensional flow round a cross-section at certain height above the ground. 
+The sensor towers, are  lattice constructions consisting in three main beams shored up by smaller beams (see Figure \ref{fig:mastphoto} and \ref{fig:mastscheme}). 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\columnwidth]{Images/MeteorologicalMast.png}
+	\caption{Meteorogical mast photos}
+	\label{fig:mastphoto}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\columnwidth]{Images/MastScheme.png}
+	\caption{Mast components}
+	\label{fig:mastscheme}
+\end{figure}
+The mast is a long slender construction, which gives an almost two-dimensional flow round a cross-section at certain height above the ground. 
 
 \subsection{Components}
 Meteorological masts usually have several measuring components, such as barometers, temperature sensors, but we focus in two of them.
@@ -101,14 +115,14 @@ Calibration is sometimes imposed by the data logger system, and rebooting the da
 Anomalies are patterns in data that do not conform to a well defined notion of normal behavior. In this section we describe the algorithms used to detect anomalies. First, we need to define some auxiliary variables that allow us the possibility of flagging certains sensors. The flagging happens in various circumstances. Once variables are properly flagged, we show the logic to determine if a fault is detected.  
 \subsection{Auxiliary variables}\label{subsec:computedvariables}
 In the data logger, anemometers measures the wind speed and their units are expressed in \emph{m/s}. The wind direction is expressed as angle in degrees on a compass rose, where the origin is pointing to the North. In order to have a continuous values for the vanes' measurements, we consider their sinus values for these variables.
-\subsubsection{Speed wind ratio}
+\subsubsection{Wind speed ratio}
 The ratio is only computed for the anemometers type sensors. If $m_t^{i}$ represents the measurement at time $t$ on the $i$-th sensor, the ratio is defined as
 \begin{equation}
 R_{t}^{j,i} = \frac{m_{t}^{j}}{m_{t}^{i}},\qquad i \neq j,
 \end{equation} 
 for all possible sensor coupling. Paired anemometers produces reduntant measures because they are placed at the same  height in mast towers: in theory their ration should always be equal to 1.
 
-\subsubsection{Speed wind Pearson correlations}
+\subsubsection{Wind speed  Pearson correlations}
 For the $i$-th sensor and for each time $t$, we consider the measurement vector with a time window $\omega$ as 
 \begin{equation}
 M^i_{t,\omega} = [m_{t-\omega}^i,m_{t-\omega+1}^i,\ldots,m_t^i]
@@ -117,7 +131,7 @@ We compute the moving Pearson correlation depending on the time window $w$ betwe
 \begin{equation}
 C^{i,j}_{t,\omega}= \rho\left( \frac{M^i_{t,\omega}}{M^j_{t,\omega}}\right)
 \end{equation}
-
+where $\rho$ is the Pearson correlation.
 \subsubsection{Wind direction difference}
 The difference between vanes sinus values is computed as follow
 \begin{equation}
@@ -155,7 +169,7 @@ A wind vane is considered a faulty wind vane  only when
 \end{itemize}
 
 \section{Results and discussion}\label{sec:results}
-We tested our algorithms to two different real world datasets. Both of them are measurements coming from mast towers  for the period of 12 months located in Argentina and Mexico. Maintenance operations as well as any detected failures or sensor replacements are unknown.
+We tested our algorithms to two different real world datasets. Both of them are measurements coming from private mast towers for the period of 12 months located in Argentina and Mexico (data are not publicly available). Maintenance operations as well as any detected failures or sensor replacements are unknown.
 
 The fault detection process is still a working in progress, and the detected faults were visually checked. Through the entire process, we were able to identify several realistic possible faults and we used them benchmarks to tunes various parameters.
 
@@ -192,8 +206,8 @@ Despite the promising results, our algorithm still need to be tested in a real w
 
 In the industry 4.0, the application of fault detection and prediction algorithms is crucial. In this context, we offered a solution to an real industrial problem. A methodology to predict faults using data provided by SCADA systems and fault files was presented. 
 
-This work bring an initial research advancement for similary sensor analysis applied to wind turbines. Despite the fact this algorithm is still in a validation stage, once its reliability is confirmed, it can be applied to other sensor systems. The preseny work is a work in progress with the goal to become an effective fault detection system.
-As future work, it si worth consider the prediction of the fault in sensors before they becomes blockers.
+This work bring an initial research advancement for similarly sensor analysis applied to wind turbines. Despite the fact this algorithm is still in a validation stage, once its reliability is confirmed, it can be applied to other sensor systems. The present work is a work in progress with the goal to become an effective fault detection system.
+As future work, it is worth considering the prediction of faults in sensors before they becomes blockers.
 
 \bibliographystyle{ieeetr}
 \bibliography{BibliografiaAERO.bib}
