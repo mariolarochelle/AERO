@@ -1,0 +1,11 @@
+Q&A Presentación ArgenCon 2020
+
+¿Aproximadamente cuanto es el tiempo y costo que presenta un determinado dispositivo meteorológico cuando está fuera de servicio debido al cambio del sensor ?
+
+Ustedes obtienen y trabajan con los datos de una sola torre meteorológica o utilizan datos de varias torres?
+
+cual es la tasa de fiabilidad aumentada por parte de la nueva correccion?.. cual es el beneficio neto de aplicar estas correcciones?
+
+Por qué se establece en 10 la frecuencia de muestreo? Son medidas estándar?
+
+¿Puede el modelo propuesto ser aplicado en otros sistemas de control para detectar (ratio,Pearson) el mal funcionamiento de un determinado sensor del mismo?
