@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: conference_101719.aux
+The style file: ieeetr.bst
+Database file #1: BibliografiaAERO.bib.bib
+Warning--I didn't find a database entry for ""
+Warning--empty journal in daneels1999scada
+You've used 18 entries,
+            1876 wiz_defined-function locations,
+            578 strings with 6866 characters,
+and the built_in function-call counts, 4605 in all, are:
+= -- 452
+> -- 194
+< -- 0
++ -- 72
+- -- 54
+* -- 326
+:= -- 674
+add.period$ -- 22
+call.type$ -- 18
+change.case$ -- 15
+chr.to.int$ -- 0
+cite$ -- 19
+duplicate$ -- 237
+empty$ -- 437
+format.name$ -- 54
+if$ -- 1112
+int.to.chr$ -- 0
+int.to.str$ -- 18
+missing$ -- 19
+newline$ -- 61
+num.names$ -- 18
+pop$ -- 60
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 141
+stack$ -- 0
+substring$ -- 268
+swap$ -- 86
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 46
+width$ -- 20
+write$ -- 180
+(There were 2 warnings)
